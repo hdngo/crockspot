@@ -1,0 +1,1102 @@
+[
+    {
+        "name": "Asparagus Soup",
+        "nutrition": {
+            "health": 20,
+            "hunger": 18.75,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Asparagus",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 1.5
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Bacon and Eggs",
+        "nutrition": {
+            "health": 20,
+            "hunger": 75,
+            "sanity": 5
+        },
+        "perishTime": 20,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Eggs",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Vegetables"
+        ]
+    },
+    {
+        "name": "Banana Pop",
+        "nutrition": {
+            "health": 20,
+            "hunger": 12.5,
+            "sanity": 33
+        },
+        "perishTime": 3,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Cave Banana",
+                "quantity": 1
+            },
+            {
+                "name": "Ice",
+                "quantity": 1
+            },
+            {
+                "name": "Twig",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Fish"
+        ]
+    },
+    {
+        "name": "Barnacle Linguine",
+        "nutrition": {
+            "health": 10,
+            "hunger": 75,
+            "sanity": 20
+        },
+        "perishTime": 6,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Barnacle",
+                "quantity": 2
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 2
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Barnacle Nigiri",
+        "nutrition": {
+            "health": 40,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Barnacle",
+                "quantity": 1
+            },
+            {
+                "name": "Kelp Frond",
+                "quantity": 1
+            },
+            {
+                "name": "Eggs",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Barnacle Pita",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Barnacle",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Beefy Greens",
+        "nutrition": {
+            "health": 40,
+            "hunger": 75,
+            "sanity": 5
+        },
+        "perishTime": 6,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Leafy Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 3
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Butter Muffin",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Butterfly Wings",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "altIngredients": [
+            {
+                "name": "Moon Moth Wings",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Meat"
+        ]
+    },
+    {
+        "name": "California Roll",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 10
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Kelp Fond",
+                "quantity": 2
+            },
+            {
+                "name": "Fish",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Ceviche",
+        "nutrition": {
+            "health": 20,
+            "hunger": 25,
+            "sanity": 5 
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Ice",
+                "quantity": 1
+            },
+            {
+                "name": "Fish",
+                "quantity": 2
+            }
+        ],
+        "restrictions": [
+            "Eggs",
+            "Filler"
+        ]
+    },
+    {
+        "name": "Creamy Potato Puree",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 33
+        },
+        "perishTime": 15,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Potatoes",
+                "quantity": 2
+            },
+            {
+                "name": "Garlic",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Dragonpie",
+        "nutrition": {
+            "health": 40,
+            "hunger": 75,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Dragon Fruit",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat"
+        ]
+    },
+    {
+        "name": "Francy Spiralled Tubers",
+        "nutrition": {
+            "health": 3,
+            "hunger": 37.5,
+            "sanity": 15
+        },
+        "perishTime": 10,
+        "cookTime": 15,
+        "ingredients": [
+            {
+                "name": "Potatoes",
+                "quantity": 1
+            },
+            {
+                "name": "Twigs",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            {
+                "name": "Inedibles",
+                "limit": 2
+            }
+        ]
+    },
+    {
+        "name": "Fish Tacos",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Corn",
+                "quantity": 1
+            },
+            {
+                "name": "Fish",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            {
+                "name": "Twigs",
+                "limit": 1
+            }
+        ]
+    },
+    {
+        "name": "Fishsticks",
+        "nutrition": {
+            "health": 40,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Fish",
+                "quantity": 0.5
+            },
+            {
+                "name": "Twigs",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Fist Full of Jam",
+        "nutrition": {
+            "health": 3,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Fruits",
+                "quantity": 2.5
+            }
+        ],
+        "restrictions": [
+            {
+                "name": "Fruits",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "name": "Froggle Bunwich",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Frog Legs",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Fruit Medley",
+        "nutrition": {
+            "health": 20, 
+            "hunger": 25,
+            "sanity": 5
+        },
+        "perishTime": 6, 
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Fruits", 
+                "quantity": 3
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Vegetables"
+        ]
+    },
+    {
+        "name": "Honey Ham",
+        "nutrition": {
+            "health": 30,
+            "hunger": 75,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Honey", 
+                "quantity": 1
+            },
+            {
+                "name": "Meat",
+                "quantity": 1.5
+            }
+        ],
+        "restrictions": [
+            "Inedibles",
+            {
+                "name": "Monster Food",
+                "limit": 1
+            }
+        ]
+    },
+    {
+        "name": "Honey Nuggets",
+        "nutrition": {
+            "health": 20,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Honey", 
+                "quantity": 1
+            },
+            {
+                "name": "Meat",
+                "quantity": 1.5
+            }
+        ],
+        "restrictions": [
+            "Inedibles",
+            {
+                "name": "Meat",
+                "limit": 1.5
+            }
+        ]
+    },
+    {
+        "name": "Jelly Salad",
+        "nutrition": {
+            "health": 0,
+            "hunger": 37.5,
+            "sanity": 50
+        },
+        "perishTime": 6,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Leafy Meat", 
+                "quantity": 2
+            },
+            {
+                "name": "Sweetener",
+                "quantity": 2
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Kabobs",
+        "nutrition": {
+            "health": 3,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            },
+            {
+                "name": "Twigs",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            {
+                "name": "Inedibles",
+                "limit": 1
+            },
+            {
+                "name": "Monster Food",
+                "limit": 1
+            }
+        ]
+    },
+    {
+        "name": "Mandrake Soup",
+        "nutrition": {
+            "health": 100,
+            "hunger": 150,
+            "sanity": 5
+        },
+        "perishTime": 6,
+        "cookTime": 60,
+        "ingredients": [
+            {
+                "name": "Mandrake", 
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Meatballs",
+        "nutrition": {
+            "health": 3,
+            "hunger": 62.5,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 15,
+        "ingredients": [
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Meaty Stew",
+        "nutrition": {
+            "health": 12,
+            "hunger": 150,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 15,
+        "ingredients": [
+            {
+                "name": "Meat",
+                "quantity": 3
+            }
+        ],
+        "restrictions": [
+            "Inedibles",
+            "Moleworm",
+            "Tallbird Eggs",
+            "Mandrake"
+        ]
+    },
+    {
+        "name": "Monster Lasagna",
+        "nutrition": {
+            "health": -20,
+            "hunger": 37.5,
+            "sanity": -20
+        },
+        "perishTime": 6,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Monster Food",
+                "quantity": 2
+            }
+        ],
+        "restrictions": [
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Mushy Cake",
+        "nutrition": {
+            "health": 0,
+            "hunger": 25,
+            "sanity": 10
+        },
+        "perishTime": 15,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Moon Shroom",
+                "quantity": 1
+            },
+            {
+                "name": "Red Cap",
+                "quantity": 1
+            },
+            {
+                "name": "Blue Cap",
+                "quantity": 1
+            },
+            {
+                "name": "Green Cap",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Leafy Meatloaf",
+        "nutrition": {
+            "health": 8,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 20,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Leafy Meat",
+                "quantity": 2
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Pierogi",
+        "nutrition": {
+            "health": 40,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 20,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Eggs",
+                "quantity": 1
+            },
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Pumpkin Cookie",
+        "nutrition": {
+            "health": 0,
+            "hunger": 37.5,
+            "sanity": 15
+        },
+        "perishTime": 10,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Pumpkin",
+                "quantity": 1
+            },
+            {
+                "name": "Sweetener",
+                "quantity": 2
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Ratatouille",
+        "nutrition": {
+            "health": 3,
+            "hunger": 25,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Inedibles"
+        ]
+    },
+    {
+        "name": "Salsa Fresca",
+        "nutrition": {
+            "health": 3,
+            "hunger": 25,
+            "sanity": 33
+        },
+        "perishTime": 15,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Toma Root",
+                "quantity": 1
+            },
+            {
+                "name": "Onions",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Inedibles",
+            "Eggs"
+        ]
+    },
+    {
+        "name": "Seafood Gumbo",
+        "nutrition": {
+            "health": 40,
+            "hunger": 37.5,
+            "sanity": 20
+        },
+        "perishTime": 10,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Fish",
+                "quantity": 2
+            }
+        ],
+        "restrictions": [
+            {
+                "name": "Meat",
+                "quantity": 2.5
+            }
+        ]
+    },
+    {
+        "name": "Stuffed Eggplant",
+        "nutrition": {
+            "health": 3,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Eggplant",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Stuffed Fish Heads",
+        "nutrition": {
+            "health": 20,
+            "hunger": 75,
+            "sanity": 0
+        },
+        "perishTime": 3,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Barnacle",
+                "quantity": 1
+            },
+            {
+                "name": "Fish",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Stuffed Pepper Poppers",
+        "nutrition": {
+            "health": 30,
+            "hunger": 25,
+            "sanity": -5
+        },
+        "perishTime": 15,
+        "cookTime": 40,
+        "ingredients": [
+            {
+                "name": "Peppers",
+                "quantity": 1
+            },
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Inedibles",
+            {
+                "name": "Meat",
+                "limit": 1.5
+            }
+        ]
+    },
+    {
+        "name": "Surf'n'Turf",
+        "nutrition": {
+            "health": 60,
+            "hunger": 37.5,
+            "sanity": 33
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Meats",
+                "quantity": 2.5
+            },
+            {
+                "name": "Fish",
+                "quantity": 1.5
+            }
+        ],
+        "restrictions": [
+            "Ice"
+        ]
+    },
+    {
+        "name": "Taffy",
+        "nutrition": {
+            "health": -3,
+            "hunger": 25,
+            "sanity": 15
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Sweetener",
+                "quantity": 3
+            }
+        ],
+        "restrictions": [
+            "Meat"
+        ]
+    },
+    {
+        "name": "Trail Mix",
+        "nutrition": {
+            "health": 30,
+            "hunger": 12.25,
+            "sanity": 5
+        },
+        "perishTime": 15,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Roasted Birchnut",
+                "quantity": 1
+            },
+            {
+                "name": "Berries",
+                "quantity": 1
+            },
+            {
+                "name": "Fruits",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Eggs",
+            "Vegetables",
+            "Dairy"
+        ]
+    },
+    {
+        "name": "Turkey Dinner",
+        "nutrition": {
+            "health": 20,
+            "hunger": 75,
+            "sanity": 5
+        },
+        "perishTime": 6,
+        "cookTime": 60,
+        "ingredients": [
+            {
+                "name": "Drumstick",
+                "quantity": 2
+            },
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 0.5
+            }
+        ],
+        "altIngredients": [
+            {
+                "name": "Drumstick",
+                "quantity": 2
+            },
+            {
+                "name": "Meat",
+                "quantity": 0.5
+            },
+            {
+                "name": "Fruits",
+                "quantity": 0.5
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Unagi",
+        "nutrition": {
+            "health": 20,
+            "hunger": 18.75,
+            "sanity": 5
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Eel",
+                "quantity": 1 
+            },
+            {
+                "name": "Lichen",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Veggie Burger",
+        "nutrition": {
+            "health": 30,
+            "hunger": 37.5,
+            "sanity": 33
+        },
+        "perishTime": 6,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Leafy Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Onions",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Vegetable Stinger",
+        "nutrition": {
+            "health": 3,
+            "hunger": 25,
+            "sanity": 33
+        },
+        "perishTime": 15,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Asparagus",
+                "quantity": 1
+            },
+            {
+                "name": "Ice",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 1.5
+            }
+        ],
+        "altIngredients": [
+            {
+                "name": "Toma Root",
+                "quantity": 1
+            },
+            {
+                "name": "Ice",
+                "quantity": 1
+            },
+            {
+                "name": "Vegetables",
+                "quantity": 1.5
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Waffles",
+        "nutrition": {
+            "health": 60,
+            "hunger": 37.5,
+            "sanity": 5
+        },
+        "perishTime": 6,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Butter",
+                "quantity": 1
+            },
+            {
+                "name": "Berries",
+                "quantity": 1
+            },
+            {
+                "name": "Eggs",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Wobster Bisque",
+        "nutrition": {
+            "health": 60,
+            "hunger": 25,
+            "sanity": 10
+        },
+        "perishTime": 10,
+        "cookTime": 10,
+        "ingredients": [
+            {
+                "name": "Wobster",
+                "quantity": 1
+            },
+            {
+                "name": "Ice",
+                "quantity": 1
+            }
+        ],
+        "restrictions": []
+    },
+    {
+        "name": "Wobster Dinner",
+        "nutrition": {
+            "health": 60,
+            "hunger": 37.5,
+            "sanity": 50
+        },
+        "perishTime": 15,
+        "cookTime": 20,
+        "ingredients": [
+            {
+                "name": "Wobster",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 1
+            }
+        ],
+        "restrictions": [
+            "Meat",
+            "Ice"
+        ]
+    }
+]
