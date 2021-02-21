@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
 	mode: 'development',
@@ -9,12 +10,19 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			title: 'Development'
-		})
+		}),
+		new VueLoaderPlugin()
 	],
 	devtool: 'inline-source-map',
 	devServer: {
-		contentBase: './dist'
+		contentBase: './dist',
+		hot: true
 	},
+	resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        },
+    },
 	output: {
 		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'dist'),
@@ -29,7 +37,7 @@ module.exports = {
 					// Translates CSS into CommonJS
 					'css-loader',
 					// Compile Sass to CSS
-					"sass-loader"
+					'sass-loader'
 				]
 			},
 			{
@@ -40,6 +48,10 @@ module.exports = {
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: 'aseet/resource',
 			} */
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader'
+			},
 			{
 				test: /\.m?js$/,
 				exclude: /(node_modules|bower_components)/,

@@ -1,14 +1,16 @@
-import _ from 'lodash';
-import './index.scss';
+import Vue from 'vue';
+import App from './js/App.vue';
 
-function component() {
-    const element = document.createElement('div');
+Vue.config.productionTip = false;
 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
+const app = document.createElement('div');
 
-    return element;
-}
-  
-document.body.appendChild(component());
+document.body.appendChild(app);
+app.setAttribute('id', 'app');
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+});
