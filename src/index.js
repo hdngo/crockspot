@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import routes from './js/router.js';
 import App from './js/App.vue';
 
 Vue.config.productionTip = false;
@@ -12,5 +13,6 @@ app.setAttribute('id', 'app');
 new Vue({
   el: '#app',
   components: { App },
-  template: '<App/>',
+  router: routes,
+  template: '<App/>'
 });

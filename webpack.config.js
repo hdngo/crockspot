@@ -16,7 +16,8 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		contentBase: './dist',
-		hot: true
+		hot: true,
+		historyApiFallback: true
 	},
 	resolve: {
         alias: {
@@ -53,14 +54,17 @@ module.exports = {
 				loader: 'vue-loader'
 			},
 			{
-				test: /\.m?js$/,
+				test: /\.m?jsx$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
 					loader: 'babel-loader',
 					options: {
 						cacheDirectory: true,
 						presets: ['@babel/preset-env'],
-						plugins: ['@babel/plugin-transform-runtime']
+						plugins: [
+							'@babel/plugin-transform-runtime',
+							"@babel/plugin-syntax-dynamic-import"
+						]
 					}
 				}
 			}

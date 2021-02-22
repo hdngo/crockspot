@@ -1,24 +1,34 @@
 <template>
   <div id="app">
-      Test
-      <TestComponent />
+      <MainSearchBar />
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TestComponent from '../components/Test.vue';
+import MainSearchBar from '../components/MainSearchBar.vue';
 
 export default {
   name: 'App',
   components: {
-      TestComponent
+      MainSearchBar
   }
 };
 </script>
 
 <style lang="scss">
+@use 'node_modules/modern-normalize/modern-normalize.css';
 @use '../scss/base';
-html {
-    // color: teal;
+
+html,
+body {
+    height: 100%;
+    width: 100%
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
