@@ -29,3 +29,15 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.form__search {
+    font-size: 1.4em;
+    min-width: 17.8em;
+    padding: 0.8em;
+
+    /* @include breakpoint('s') {
+        min-width: 20em;
+    } */
+}
+</style>
