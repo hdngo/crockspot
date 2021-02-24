@@ -22,9 +22,8 @@
 				<li
 					v-for="(item, i) in results"
 					:key="`item-${i}`"
-					v-html="highlightMatches(results[i])"
+					v-html="recurse(searchQuery, results[i])"
 				>
-
 				</li>
 			</ul>
 		</div>
@@ -32,7 +31,7 @@
 </template>
 
 <script>
-import { filterResults, sortResults, highlightMatches } from '../mixins/search'
+import { filterResults, sortResults, recurse } from '../mixins/search'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -55,21 +54,25 @@ export default {
 	},
 	methods: {
 		handleChange(e) {
-			// console.log(this.searchQuery)
-			let filteredResults = filterResults(this.searchQuery, this.recipes);
-			this.results = filteredResults.map(result => result.name)
+			console.log(this.searchQuery)
+			if (this.searchQuery.length) {
+				let filteredResults = filterResults(this.searchQuery, this.recipes);
+				this.results = filteredResults.map(result => result.name)
+			} else {
+				this.results = [];
+			}
 		},
 		handleSubmit(e) {
 			// console.log(this.recipes)
 		},
-		highlightMatches(word) {
-			return highlightMatches(word)
+		recurse(matchString, word, returnString) {
+			return recurse(matchString, word)
 		}
 	}
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .form__search {
 	font-size: 1.4em;
 	min-width: 17.8em;
@@ -78,5 +81,9 @@ export default {
 	/* @include breakpoint('s') {
 		min-width: 20em;
 	} */
+}
+
+.bold {
+	font-weight: 600;
 }
 </style>
