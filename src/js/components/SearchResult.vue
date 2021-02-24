@@ -15,7 +15,8 @@
             <ul class="results__stats">
                 <li
                     v-for="statKey in Object.keys(itemData.stats)"
-                    :key="`${statKey.toLowerCase().split(' ').join()}-${stat}`"
+                    class="results__stat"
+                    :key="`${statKey.toLowerCase().split(' ').join()}-${statKey}`"
                 >
                     {{ `${statKey} : ${itemData.stats[statKey]}` }}
                 </li>
@@ -41,3 +42,29 @@ export default {
     },
 }
 </script>
+
+<style lang="scss" scoped>
+li {
+    list-style-type: none;
+}
+
+.results__item {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    padding: 0.5em 0.8em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.results__stat {
+    display: inline-block;
+}
+
+.focused {
+    border: 2px solid indigo;
+}
+</style>

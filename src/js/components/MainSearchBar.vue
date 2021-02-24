@@ -12,6 +12,9 @@
 				v-model="searchQuery"
 				@input="handleChange"
 				@keyup.enter="handleSubmit"
+				@focus="handleFocus"
+				@keydown.up="cycleUp"
+				@keydown.down="cycleDown"
 			>
 		</form>
 		<div 
@@ -22,6 +25,9 @@
 				<SearchResult
 					v-for="(item, i) in results"
 					:key="`item-${i}`"
+					:class="[
+						{ 'focused' : focusedResultIndex === i }
+					]"
 					:name="highlightTextMatches(results[i].name)"
 					:itemData="results[i]"
 				/>
@@ -44,7 +50,8 @@ export default {
 	data () {
 		return {
 			searchQuery: '',
-			results: []
+			results: [],
+			focusedResultIndex: 0
 		}
 	},
 	computed: {
@@ -69,6 +76,24 @@ export default {
 		},
 		highlightTextMatches(word) {
 			return highlightTextMatches(this.searchQuery, word)
+		},
+		handleFocus(e) {
+			console.log('focused')
+		},
+		cycleUp(e) {
+			let nextItemIndex = this.focusedResultIndex - 1
+
+			if (nextItemIndex < 0) {
+				if (this.results.length) {
+					nextItemIndex = this.results.length - 1
+				}
+			}
+
+			this.focusedResultIndex = nextItemIndex
+		},
+		cycleDown(e) {
+			let nextItemIndex = this.focusedResultIndex + 1 % this.results.length
+			this.focusedResultIndex = nextItemIndex % this.results.length
 		}
 	}
 }
@@ -87,5 +112,9 @@ export default {
 
 .bold {
 	font-weight: 600;
+}
+
+.search__results {
+	padding: 0;
 }
 </style>
