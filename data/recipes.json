@@ -1,7 +1,7 @@
 [
     {
         "name": "Asparagus Soup",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 18.75,
             "sanity": 5
@@ -25,7 +25,7 @@
     },
     {
         "name": "Bacon and Eggs",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 75,
             "sanity": 5
@@ -48,7 +48,7 @@
     },
     {
         "name": "Banana Pop",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 12.5,
             "sanity": 33
@@ -76,7 +76,7 @@
     },
     {
         "name": "Barnacle Linguine",
-        "nutrition": {
+        "stats": {
             "health": 10,
             "hunger": 75,
             "sanity": 20
@@ -97,7 +97,7 @@
     },
     {
         "name": "Barnacle Nigiri",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 37.5,
             "sanity": 5
@@ -122,7 +122,7 @@
     },
     {
         "name": "Barnacle Pita",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 5
@@ -143,7 +143,7 @@
     },
     {
         "name": "Beefy Greens",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 75,
             "sanity": 5
@@ -164,7 +164,7 @@
     },
     {
         "name": "Butter Muffin",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 5
@@ -197,7 +197,7 @@
     },
     {
         "name": "California Roll",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 10
@@ -218,7 +218,7 @@
     },
     {
         "name": "Ceviche",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 25,
             "sanity": 5 
@@ -242,7 +242,7 @@
     },
     {
         "name": "Creamy Potato Puree",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 33
@@ -266,7 +266,7 @@
     },
     {
         "name": "Dragonpie",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 75,
             "sanity": 5
@@ -285,7 +285,7 @@
     },
     {
         "name": "Francy Spiralled Tubers",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 37.5,
             "sanity": 15
@@ -312,7 +312,7 @@
     },
     {
         "name": "Fish Tacos",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 5
@@ -338,7 +338,7 @@
     },
     {
         "name": "Fishsticks",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 37.5,
             "sanity": 5
@@ -361,7 +361,7 @@
     },
     {
         "name": "Fist Full of Jam",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 37.5,
             "sanity": 5
@@ -383,7 +383,7 @@
     },
     {
         "name": "Froggle Bunwich",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 5
@@ -404,7 +404,7 @@
     },
     {
         "name": "Fruit Medley",
-        "nutrition": {
+        "stats": {
             "health": 20, 
             "hunger": 25,
             "sanity": 5
@@ -424,7 +424,7 @@
     },
     {
         "name": "Honey Ham",
-        "nutrition": {
+        "stats": {
             "health": 30,
             "hunger": 75,
             "sanity": 5
@@ -451,7 +451,7 @@
     },
     {
         "name": "Honey Nuggets",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 37.5,
             "sanity": 5
@@ -478,7 +478,7 @@
     },
     {
         "name": "Jelly Salad",
-        "nutrition": {
+        "stats": {
             "health": 0,
             "hunger": 37.5,
             "sanity": 50
@@ -499,7 +499,7 @@
     },
     {
         "name": "Kabobs",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 37.5,
             "sanity": 5
@@ -529,7 +529,7 @@
     },
     {
         "name": "Mandrake Soup",
-        "nutrition": {
+        "stats": {
             "health": 100,
             "hunger": 150,
             "sanity": 5
@@ -546,7 +546,7 @@
     },
     {
         "name": "Meatballs",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 62.5,
             "sanity": 5
@@ -565,7 +565,7 @@
     },
     {
         "name": "Meaty Stew",
-        "nutrition": {
+        "stats": {
             "health": 12,
             "hunger": 150,
             "sanity": 5
@@ -587,7 +587,7 @@
     },
     {
         "name": "Monster Lasagna",
-        "nutrition": {
+        "stats": {
             "health": -20,
             "hunger": 37.5,
             "sanity": -20
@@ -606,7 +606,7 @@
     },
     {
         "name": "Mushy Cake",
-        "nutrition": {
+        "stats": {
             "health": 0,
             "hunger": 25,
             "sanity": 10
@@ -635,7 +635,7 @@
     },
     {
         "name": "Leafy Meatloaf",
-        "nutrition": {
+        "stats": {
             "health": 8,
             "hunger": 37.5,
             "sanity": 5
@@ -652,7 +652,7 @@
     },
     {
         "name": "Pierogi",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 37.5,
             "sanity": 5
@@ -679,7 +679,7 @@
     },
     {
         "name": "Pumpkin Cookie",
-        "nutrition": {
+        "stats": {
             "health": 0,
             "hunger": 37.5,
             "sanity": 15
@@ -700,7 +700,7 @@
     },
     {
         "name": "Ratatouille",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 25,
             "sanity": 5
@@ -720,7 +720,7 @@
     },
     {
         "name": "Salsa Fresca",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 25,
             "sanity": 33
@@ -745,7 +745,7 @@
     },
     {
         "name": "Seafood Gumbo",
-        "nutrition": {
+        "stats": {
             "health": 40,
             "hunger": 37.5,
             "sanity": 20
@@ -767,7 +767,7 @@
     },
     {
         "name": "Stuffed Eggplant",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 37.5,
             "sanity": 5
@@ -788,7 +788,7 @@
     },
     {
         "name": "Stuffed Fish Heads",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 75,
             "sanity": 0
@@ -809,7 +809,7 @@
     },
     {
         "name": "Stuffed Pepper Poppers",
-        "nutrition": {
+        "stats": {
             "health": 30,
             "hunger": 25,
             "sanity": -5
@@ -836,7 +836,7 @@
     },
     {
         "name": "Surf'n'Turf",
-        "nutrition": {
+        "stats": {
             "health": 60,
             "hunger": 37.5,
             "sanity": 33
@@ -859,7 +859,7 @@
     },
     {
         "name": "Taffy",
-        "nutrition": {
+        "stats": {
             "health": -3,
             "hunger": 25,
             "sanity": 15
@@ -878,7 +878,7 @@
     },
     {
         "name": "Trail Mix",
-        "nutrition": {
+        "stats": {
             "health": 30,
             "hunger": 12.25,
             "sanity": 5
@@ -908,7 +908,7 @@
     },
     {
         "name": "Turkey Dinner",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 75,
             "sanity": 5
@@ -947,7 +947,7 @@
     },
     {
         "name": "Unagi",
-        "nutrition": {
+        "stats": {
             "health": 20,
             "hunger": 18.75,
             "sanity": 5
@@ -968,7 +968,7 @@
     },
     {
         "name": "Veggie Burger",
-        "nutrition": {
+        "stats": {
             "health": 30,
             "hunger": 37.5,
             "sanity": 33
@@ -993,7 +993,7 @@
     },
     {
         "name": "Vegetable Stinger",
-        "nutrition": {
+        "stats": {
             "health": 3,
             "hunger": 25,
             "sanity": 33
@@ -1032,7 +1032,7 @@
     },
     {
         "name": "Waffles",
-        "nutrition": {
+        "stats": {
             "health": 60,
             "hunger": 37.5,
             "sanity": 5
@@ -1056,7 +1056,7 @@
     },
     {
         "name": "Wobster Bisque",
-        "nutrition": {
+        "stats": {
             "health": 60,
             "hunger": 25,
             "sanity": 10
@@ -1077,7 +1077,7 @@
     },
     {
         "name": "Wobster Dinner",
-        "nutrition": {
+        "stats": {
             "health": 60,
             "hunger": 37.5,
             "sanity": 50

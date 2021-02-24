@@ -15,28 +15,31 @@
 			>
 		</form>
 		<div 
-			class="results"
+			class="search--results__wrapper"
 			v-if="results.length"
 		>
-			<ul>
-				<li
+			<ul class="search--results">
+				<SearchResult
 					v-for="(item, i) in results"
 					:key="`item-${i}`"
-					v-html="recurse(searchQuery, results[i])"
-				>
-				</li>
+					:name="highlightTextMatches(results[i].name)"
+					:itemData="results[i]"
+				/>
 			</ul>
 		</div>
 	</div>
 </template>
 
 <script>
-import { filterResults, sortResults, recurse } from '../mixins/search'
+import SearchResult from './SearchResult.vue'
+import { filterResults, sortResults, highlightTextMatches } from '../mixins/search'
 import { mapGetters } from 'vuex'
 
 export default {
 	name: 'MainSearchBar',
-	components: {},
+	components: {
+		SearchResult
+	},
 	props: {},
 	data () {
 		return {
@@ -54,10 +57,9 @@ export default {
 	},
 	methods: {
 		handleChange(e) {
-			console.log(this.searchQuery)
 			if (this.searchQuery.length) {
 				let filteredResults = filterResults(this.searchQuery, this.recipes);
-				this.results = filteredResults.map(result => result.name)
+				this.results = filteredResults.map(result => result)
 			} else {
 				this.results = [];
 			}
@@ -65,8 +67,8 @@ export default {
 		handleSubmit(e) {
 			// console.log(this.recipes)
 		},
-		recurse(matchString, word, returnString) {
-			return recurse(matchString, word)
+		highlightTextMatches(word) {
+			return highlightTextMatches(this.searchQuery, word)
 		}
 	}
 }

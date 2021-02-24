@@ -11,7 +11,7 @@ const sortResults = () => {
     console.log(3, 4)
 }
 
-const recurse = (query, baseString) => {
+const highlightTextMatches = (query, baseString) => {
     let regex = new RegExp(`${query}`, 'i')
     let subString = '';
     let matchIndex = baseString.search(regex)
@@ -22,7 +22,7 @@ const recurse = (query, baseString) => {
         let newMatchIndex = endString.search(regex)
         
         if (newMatchIndex >= 0) {
-            return subString += recurse(query, endString)
+            return subString += highlightTextMatches(query, endString)
         } else {
             subString += `<span>${endString}</span>`
         }
@@ -33,5 +33,5 @@ const recurse = (query, baseString) => {
 module.exports = {
     filterResults,
     sortResults,
-    recurse
+    highlightTextMatches
 }
