@@ -1,6 +1,7 @@
 <template>
     <div>
         <MainSearchBar />
+		<router-link to="/recipes">Recipes</router-link>
     </div>
 </template>
 

@@ -17,6 +17,19 @@ export default new Router({
             name: "about",
             component: About
         },
+        {
+            path: "/recipes",
+            name: "recipe",
+            component: () => 
+                import(/* webpackChunkName: "recipeList" */ "./components/RecipeList.vue" )
+        },
+        {
+            path: "/recipes/:name",
+            name: "recipe",
+            component: () => 
+                import(/* webpackChunkName: "recipe" */ "./components/Recipe.vue")
+        },
+
     ],
     mode: 'history'
 })

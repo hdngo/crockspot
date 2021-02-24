@@ -2,26 +2,28 @@
     <li 
         class="results__item"
     >
-        <div class="results__info">
-            <div class="results__details">
-                <p
-                    class="results__name"
-                    v-html="name" 
-                />
-                <span class="results__description">
+        <router-link :to="`/recipes/${itemData.name.toLowerCase().split(' ').join('-')}`">
+            <div class="results__info">
+                <div class="results__details">
+                    <p
+                        class="results__name"
+                        v-html="name" 
+                    />
+                    <span class="results__description">
 
-                </span>
+                    </span>
+                </div>
+                <ul class="results__stats">
+                    <li
+                        v-for="statKey in Object.keys(itemData.stats)"
+                        class="results__stat"
+                        :key="`${statKey.toLowerCase().split(' ').join()}-${statKey}`"
+                    >
+                        {{ `${statKey} : ${itemData.stats[statKey]}` }}
+                    </li>
+                </ul>
             </div>
-            <ul class="results__stats">
-                <li
-                    v-for="statKey in Object.keys(itemData.stats)"
-                    class="results__stat"
-                    :key="`${statKey.toLowerCase().split(' ').join()}-${statKey}`"
-                >
-                    {{ `${statKey} : ${itemData.stats[statKey]}` }}
-                </li>
-            </ul>
-        </div>
+        </router-link>
     </li>
 </template>
 
