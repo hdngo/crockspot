@@ -2,6 +2,7 @@
     <div>
         <MainSearchBar />
 		<router-link to="/recipes">Recipes</router-link>
+        <router-link to="/items">Items</router-link>
     </div>
 </template>
 

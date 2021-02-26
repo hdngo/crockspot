@@ -1,29 +1,5 @@
 [
     {
-        "name": "Asparagus Soup",
-        "stats": {
-            "health": 20,
-            "hunger": 18.75,
-            "sanity": 5
-        },
-        "perishTime": 15,
-        "cookTime": 10,
-        "ingredients": [
-            {
-                "name": "Asparagus",
-                "quantity": 1
-            },
-            {
-                "name": "Vegetables",
-                "quantity": 1.5
-            }
-        ],
-        "restrictions": [
-            "Meat",
-            "Inedibles"
-        ]
-    },
-    {
         "name": "Bacon and Eggs",
         "stats": {
             "health": 20,
@@ -85,7 +61,7 @@
         "cookTime": 40,
         "ingredients": [
             {
-                "name": "Barnacle",
+                "name": "Barnacles",
                 "quantity": 2
             },
             {
@@ -106,7 +82,7 @@
         "cookTime": 10,
         "ingredients": [
             {
-                "name": "Barnacle",
+                "name": "Barnacles",
                 "quantity": 1
             },
             {
@@ -131,7 +107,7 @@
         "cookTime": 40,
         "ingredients": [
             {
-                "name": "Barnacle",
+                "name": "Barnacles",
                 "quantity": 1
             },
             {
@@ -797,7 +773,7 @@
         "cookTime": 40,
         "ingredients": [
             {
-                "name": "Barnacle",
+                "name": "Barnacles",
                 "quantity": 1
             },
             {
@@ -1002,20 +978,6 @@
         "cookTime": 10,
         "ingredients": [
             {
-                "name": "Asparagus",
-                "quantity": 1
-            },
-            {
-                "name": "Ice",
-                "quantity": 1
-            },
-            {
-                "name": "Vegetables",
-                "quantity": 1.5
-            }
-        ],
-        "altIngredients": [
-            {
                 "name": "Toma Root",
                 "quantity": 1
             },
@@ -1052,51 +1014,6 @@
                 "name": "Eggs",
                 "quantity": 1
             }
-        ]
-    },
-    {
-        "name": "Wobster Bisque",
-        "stats": {
-            "health": 60,
-            "hunger": 25,
-            "sanity": 10
-        },
-        "perishTime": 10,
-        "cookTime": 10,
-        "ingredients": [
-            {
-                "name": "Wobster",
-                "quantity": 1
-            },
-            {
-                "name": "Ice",
-                "quantity": 1
-            }
-        ],
-        "restrictions": []
-    },
-    {
-        "name": "Wobster Dinner",
-        "stats": {
-            "health": 60,
-            "hunger": 37.5,
-            "sanity": 50
-        },
-        "perishTime": 15,
-        "cookTime": 20,
-        "ingredients": [
-            {
-                "name": "Wobster",
-                "quantity": 1
-            },
-            {
-                "name": "Butter",
-                "quantity": 1
-            }
-        ],
-        "restrictions": [
-            "Meat",
-            "Ice"
         ]
     }
 ]

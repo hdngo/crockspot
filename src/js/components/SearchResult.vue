@@ -2,7 +2,7 @@
     <li 
         class="results__item"
     >
-        <router-link :to="`/recipes/${itemData.name.toLowerCase().split(' ').join('-')}`">
+        <router-link :to="`/recipes/${loDash(itemData.name)}`">
             <div class="results__info">
                 <div class="results__details">
                     <p
@@ -17,7 +17,7 @@
                     <li
                         v-for="statKey in Object.keys(itemData.stats)"
                         class="results__stat"
-                        :key="`${statKey.toLowerCase().split(' ').join()}-${statKey}`"
+                        :key="`${loDash(statKey)}-${statKey}`"
                     >
                         {{ `${statKey} : ${itemData.stats[statKey]}` }}
                     </li>
@@ -29,6 +29,7 @@
 
 <script>
 import { highlightTextMatches } from '../mixins/search'
+import { loDash } from '../helpers'
 
 export default {
     name: 'SearchResult',
@@ -42,6 +43,11 @@ export default {
             required: true
         }
     },
+    methods: {
+        loDash(string) {
+            return loDash(string)
+        }
+    }
 }
 </script>
 

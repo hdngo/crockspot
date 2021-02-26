@@ -21,6 +21,16 @@
 			class="search--results__wrapper"
 			v-if="results.length"
 		>
+			<button
+				@click="sortByNameDesc(results)"
+			>
+				desc
+			</button>
+			<button
+				@click="sortByNameAsc(results)"
+			>
+				asc
+			</button>
 			<ul class="search--results">
 				<SearchResult
 					v-for="(item, i) in results"
@@ -94,6 +104,16 @@ export default {
 		cycleDown(e) {
 			let nextItemIndex = this.focusedResultIndex + 1 % this.results.length
 			this.focusedResultIndex = nextItemIndex % this.results.length
+		},
+		sortByNameDesc(data) {
+			this.results = data.sort((a, b) => {
+				return a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1
+			})
+		},
+		sortByNameAsc(data) {
+			this.results = data.sort((a, b) => {
+				return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
+			})
 		}
 	}
 }

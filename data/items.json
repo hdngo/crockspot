@@ -1,0 +1,1179 @@
+[
+    {
+        "name": "Meats",
+        "type": "Food Group",
+        "description": "The true fruit of the earth!"
+    },
+    {
+        "name": "Fishes",
+        "types": [
+            "Food Group"
+        ],
+        "description": "Meat of the sea!"
+    },
+    {
+        "name": "Eggs",
+        "types": [
+            "Food Group"
+        ],
+        "description": "Will it hatch?"
+    },
+    {
+        "name": "Fruits",
+        "types": [
+            "Food Group"
+        ],
+        "description": "IT HAS HEALING PROPERTIES"
+    },
+    {
+        "name": "Vegetables",
+        "types": [
+            "Food Group"
+        ],
+        "description": "What seeds shall I sow?"
+    },
+    {
+        "name": "Sweetener",
+        "types": [
+            "Food Group"
+        ],
+        "description": "Is yum!"
+    },
+    {
+        "name": "Monster Food",
+        "types": [
+            "Food Group"
+        ],
+        "description": "Ugh. I don't think I should eat that."
+    },
+    {
+        "name": "Dairy",
+        "types": [
+            "Food Group"
+        ],
+        "description": "A glass of milk with every supper."
+    },
+    {
+        "name": "Filler",
+        "types": [
+            "Food Group"
+        ]
+    },
+    {
+        "name": "Inedibles",
+        "types": [
+            "Food Group"
+        ],
+        "description": "Feed to WX-78."
+    },
+    {
+        "name": "Batilisk Wing",
+        "types": [
+            "Meat"
+        ],
+        "obtainedFrom": [
+            "Batilisk"
+        ]
+    },
+    {
+        "name": "Cooked Batilisk Wing",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": 0.5,
+        "obtainedFrom": [
+            "Batilisk Wing"
+        ]
+    },
+    {
+        "name": "Drumstick",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": 1,
+        "obtainedFrom": [
+            "Gobbler",
+            "Pengull",
+            "Buzzard",
+            "Goose",
+            "Mosling"
+        ]
+    },
+    {
+        "name": "Fried Drumstick",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": 1,
+        "obtainedFrom": [
+            "Drumstick"
+        ]
+    },
+    {
+        "name": "Live Eel",
+        "types": [
+            "Fish",
+            "Meat"
+        ],
+        "foodValue": {
+            "Fish": 1,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Oasis"
+        ]
+    },
+    {
+        "name": "Eel",
+        "types": [
+            "Fish",
+            "Meat"
+        ],
+        "foodValue": {
+            "Fish": 1,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Oasis"
+        ]
+    },
+    {
+        "name": "Cooked Eel",
+        "types": [
+            "Fish",
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Fish": 1,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Eel"
+        ]
+    },
+    {
+        "name": "Freshwater Fish",
+        "types": [
+            "Fish",
+            "Meat"
+        ],
+        "foodValue": {
+            "Fish": 0.5,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Pond",
+            "Merm",
+            "Loyal Merm Guard",
+            "King of the Merms",
+            "Rundown House",
+            "Craftsmerm House"
+        ]
+    },
+    {
+        "name": "Fish",
+        "types": [
+            "Fish",
+            "Meat"
+        ],
+        "foodValue": {
+            "Fish": 1,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Merm",
+            "Rundown House",
+            "Pond"
+        ]
+    },
+    {
+        "name": "Cooked Fish",
+        "types": [
+            "Fish",
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Fish": 1,
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Fish"
+        ]
+    },
+    {
+        "name": "Frog Legs",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": {
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Frog",
+            "Merm",
+            "Toadstool",
+            "Loyal Merm Guard",
+            "King of the Merms"
+        ]
+    },
+    {
+        "name": "Cooked Frog Legs",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Frog Legs"
+        ]
+    },
+    {
+        "name": "Koalefant Trunk",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": {
+            "Meat": 0
+        },
+        "obtainedFrom": [
+            "Koalefant"
+        ]
+    },
+    {
+        "name": "Koalefant Trunk Steak",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Meat": 0
+        },
+        "obtainedFrom": [
+            "Koalefant Trunk",
+            "Winter Koalefant Trunk"
+        ]
+    },
+    {
+        "name": "Winter Koalefant Trunk",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": {
+            "Meat": 0
+        },
+        "obtainedFrom": [
+            "Winter Koalefant"
+        ]
+    },
+    {
+        "name": "Meat",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": {
+            "Meat": 1
+        },
+        "obtainedFrom": [
+            "Pig",
+            "Guardian Pig",
+            "Bunnyman",
+            "MacTusk",
+            "WeeTusk",
+            "Rock Lobster",
+            "Teenbird",
+            "Mosling",
+            "Catcoon",
+            "Werepig",
+            "Tallbird",
+            "Volt Goat",
+            "Red Gem Deer",
+            "Teen Beefalo",
+            "Beefalo",
+            "Antlion",
+            "Goose",
+            "Malbatross",
+            "Crab King",
+            "Koalefant",
+            "Winter Koalefant",
+            "Deerclops",
+            "Ancient Guardian",
+            "Bearger",
+            "Dragonfly"
+        ]
+    },
+    {
+        "name": "Cooked Meat",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Meat": 1
+        },
+        "obtainedFrom": [
+            "Meat"
+        ]
+    },
+    {
+        "name": "Monster Meat",
+        "types": [
+            "Meat",
+            "Monster Food"
+        ],
+        "foodValue": {
+            "Meat": 1,
+            "Monster Food": 1
+        },
+        "obtainedFrom": [
+            "Batilisk",
+            "Moonrock Pengull",
+            "Beardling",
+            "Spider",
+            "Spider Warrior",
+            "Hound",
+            "Red Hound",
+            "Blue Hound",
+            "Krampus",
+            "Treeguard",
+            "Skittersquid",
+            "Tentacle",
+            "Glommer",
+            "Spider Queen"
+        ]
+    },
+    {
+        "name": "Cooked Monster Meat",
+        "types": [
+            "Meat",
+            "Cooked",
+            "Monster Food"
+        ],
+        "foodValue": {
+            "Meat": 1,
+            "Monster Food": 1
+        },
+        "obtainedFrom": [
+            "Monster Meat"
+        ]
+    },
+    {
+        "name": "Morsel",
+        "types": [
+            "Meat"
+        ],
+        "foodValue": {
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Pengull",
+            "Buzzard",
+            "Crow",
+            "Redbird",
+            "Snowbird",
+            "Rabbit",
+            "Moleworm",
+            "Baby Beefalo"
+        ]
+    },
+    {
+        "name": "Cooked Morsel",
+        "types": [
+            "Meat",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Meat": 0.5
+        },
+        "obtainedFrom": [
+            "Morsel"
+        ]
+    },
+    {
+        "name": "Barnacles",
+        "types": [
+            "Meat",
+            "Fish"
+        ],
+        "foodValue": {
+            "Meat": 0.25,
+            "Fish": 0.25
+        },
+        "obtainedFrom": [
+            "Sea Weed",
+            "Crab King"
+        ]
+    },
+    {
+        "name": "Cooked Barnacles",
+        "types": [
+            "Meat",
+            "Fish"
+        ],
+        "foodValue": {
+            "Meat": 0.25,
+            "Fish": 0.25
+        },
+        "obtainedFrom": [
+            "Barnacles"
+        ]
+    },
+    {
+        "name": "Eggs",
+        "types": [
+            "Eggs"
+        ],
+        "foodValue": {
+            "Eggs": 1
+        },
+        "obtainedFrom": [
+            "Redbird",
+            "Crow",
+            "Snowbird",
+            "Pengull"
+        ]
+    },
+    {
+        "name": "Cooked Egg",
+        "types": [
+            "Eggs",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Eggs": 1
+        },
+        "obtainedFrom": [
+            "Eggs"
+        ]
+    },
+    {
+        "name": "Tallbird Egg",
+        "types": [
+            "Eggs"
+        ],
+        "foodValue": {
+            "Eggs": 4
+        },
+        "obtainedFrom": [
+            "Tallbird"
+        ]
+    },
+    {
+        "name": "Fried Tallbird Egg",
+        "types": [
+            "Eggs",
+            "Cooked"
+        ],
+        "foodValue": {
+            "Eggs": 4
+        },
+        "obtainedFrom": [
+            "Tallbird Egg"
+        ]
+    },
+    {
+        "name": "Berries",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 0.5
+        },
+        "obtainedFrom": [
+            "Berry Bush",
+            "Tumbleweed"
+        ]
+    },
+    {
+        "name": "Roasted Berries",
+        "types": [
+            "Fruits",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Fruits": 0.5
+        },
+        "obtainedFrom": [
+            "Berries"
+        ]
+    },
+    {
+        "name": "Dragon Fruit",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Prepared Dragon Fruit",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Dragon Fruit"
+        ]
+    },
+    {
+        "name": "Durian",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 1,
+            "Monster Food": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Extra Smelly Durian",
+        "types": [
+            "Fruits",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Fruits": 1,
+            "Monster Food": 1
+        },
+        "obtainedFrom": [
+            "Durian"
+        ]
+    },
+    {
+        "name": "Pomegranate",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Sliced Pomegranate",
+        "types": [
+            "Fruits",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Pomegranate"
+        ]
+    },
+    {
+        "name": "Watermelon",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Grilled Watermelon",
+        "types": [
+            "Fruits",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Fruits": 1
+        },
+        "obtainedFrom": [
+            "Watermelon"
+        ]
+    },
+    {
+        "name": "Juicy Berries",
+        "types": [
+            "Fruits"
+        ],
+        "foodValues": {
+            "Fruits": 0.5
+        },
+        "obtainedFrom": [
+            "Juicy Berry Bush"
+        ]
+    },
+    {
+        "name": "Cooked Juicy Berries",
+        "types": [
+            "Fruits",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Fruits": 0.5
+        },
+        "obtainedFrom": [
+            "Juicy Berries"
+        ]
+    },
+    {
+        "name": "Carrot",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm",
+            "Bunnyman",
+            "Rabbit Hutch"
+        ]
+    },
+    {
+        "name": "Roasted Carrot",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Carrot"
+        ]
+    },
+    {
+        "name": "Corn",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Popcorn",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Corn"
+        ]
+    },
+    {
+        "name": "Eggplant",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Braised Eggplant",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Blue Cap",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Loot",
+            "Blue Mushtree"
+        ]
+    },
+    {
+        "name": "Cooked Blue Cap",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Blue Cap"
+        ]
+    },
+    {
+        "name": "Blue Cap",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Loot",
+            "Blue Mushtree"
+        ]
+    },
+    {
+        "name": "Green Cap",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Loot",
+            "Green Mushtree"
+        ]
+    },
+    {
+        "name": "Cooked Green Cap",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Green Cap"
+        ]
+    },
+    {
+        "name": "Red Cap",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Loot",
+            "Red Mushtree"
+        ]
+    },
+    {
+        "name": "Cooked Red Cap",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Red Cap"
+        ]
+    },
+    {
+        "name": "Mandrake",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Loot"
+        ]
+    },
+    {
+        "name": "Cooked Mandrake",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Mandrake"
+        ]
+    },
+    {
+        "name": "Cactus Flesh",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Cactus"
+        ]
+    },
+    {
+        "name": "Cooked Cactus Flesh",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Cactus Flesh"
+        ]
+    },
+    {
+        "name": "Cactus Flower",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Cactus"
+        ]
+    },
+    {
+        "name": "Seaweed",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Seaweed Plants"
+        ]
+    },
+    {
+        "name": "Roasted Seaweed",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Seaweed"
+        ]
+    },
+    {
+        "name": "Sweet Potato",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Cooked Sweet Potato",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Sweet Potato"
+        ]
+    },
+    {
+        "name": "Kelp Fronds",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Cooked Kelp Fronds",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Kelp Fronds"
+        ]
+    },
+    {
+        "name": "Garlic",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Roasted Garlic",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Garlic"
+        ]
+    },
+    {
+        "name": "Onion",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Roasted Onion",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Onion"
+        ]
+    },
+    {
+        "name": "Pepper",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Roasted Pepper",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Pepper"
+        ]
+    },
+    {
+        "name": "Potato",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Roasted Potato",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Potato"
+        ]
+    },
+    {
+        "name": "Toma Root",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Roasted Toma Root",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 1
+        },
+        "obtainedFrom": [
+            "Toma Root"
+        ]
+    },
+    {
+        "name": "Moon Shroom",
+        "types": [
+            "Vegetables"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Farm"
+        ]
+    },
+    {
+        "name": "Cooked Moon Shroom",
+        "types": [
+            "Vegetables",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Vegetables": 0.5
+        },
+        "obtainedFrom": [
+            "Lunar Mushtrees",
+            "Naked Mole Bat Burrows"
+        ]
+    },
+    {
+        "name": "Honey",
+        "types": [
+            "Sweetener"
+        ],
+        "foodValues": {
+            "Sweetener": 1
+        },
+        "obtainedFrom": [
+            "Bee",
+            "Killer Bee",
+            "Beehive",
+            "Killer Beehive",
+            "Bee Box",
+            "Bee Queen"
+        ]
+    },
+    {
+        "name": "Honeycomb",
+        "types": [
+            "Sweetener"
+        ],
+        "foodValues": {
+            "Sweetener": 1
+        },
+        "obtainedFrom": [
+            "Beehive",
+            "Killer Beehive",
+            "Bee Queen"
+        ]
+    },
+    {
+        "name": "Royal Jelly",
+        "types": [
+            "Sweetener"
+        ],
+        "foodValues": {
+            "Sweetener": 3
+        },
+        "obtainedFrom": [
+            "Bee Queen",
+            "Krampus"
+        ]
+    },
+    {
+        "name": "Butter",
+        "types": [
+            "Dairy"
+        ],
+        "obtainedFrom": [
+            "Butterfly"
+        ]
+    },
+    {
+        "name": "Roasted Birchnut",
+        "types": [
+            "Filler",
+            "Cooked"
+        ],
+        "foodValues": {
+            "Filler": 1
+        },
+        "obtainedFrom": [
+            "Birchnut Tree"
+        ]
+    },
+    {
+        "name": "Ice",
+        "types": [
+            "Filler"
+        ],
+        "foodValues": {
+            "Filler": 1
+        },
+        "obtainedFrom": [
+            "Loot"
+        ]
+    },
+    {
+        "name": "Twigs",
+        "types": [
+            "Filler",
+            "Inedible"
+        ],
+        "obtainedFrom": [
+            "Tumbleweed",
+            "Loot",
+            "Sapling",
+            "Spiky Tree",
+            "Birchnutter"
+        ]
+    }
+]

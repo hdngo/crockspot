@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './components/Home.vue';
 import About from './components/About.vue';
+import FourOhFour from "./components/FourOhFour.vue";
 
 Vue.use(Router);
 
@@ -19,9 +20,9 @@ export default new Router({
         },
         {
             path: "/recipes",
-            name: "recipe",
+            name: "recipes",
             component: () => 
-                import(/* webpackChunkName: "recipeList" */ "./components/RecipeList.vue" )
+               import(/* webpackChunkName: "recipeList" */ "./components/RecipeList.vue")
         },
         {
             path: "/recipes/:name",
@@ -29,7 +30,22 @@ export default new Router({
             component: () => 
                 import(/* webpackChunkName: "recipe" */ "./components/Recipe.vue")
         },
-
+        {
+            path: "/items",
+            name: "items",
+            component: () =>
+                import(/* webpackChunkName: "itemList" */ "./components/ItemList.vue")
+        },
+        {
+            path: "/items/:name",
+            name: "item",
+            component: () =>
+                import(/* webpackChunkName: "item" */ "./components/Item.vue")
+        },
+        {
+            path: "*",
+            component: FourOhFour
+        }
     ],
     mode: 'history'
 })
