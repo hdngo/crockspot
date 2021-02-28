@@ -14,6 +14,13 @@ const state = {
 const getters = {
     getRecipes: state => state.recipes,
     getItems: state => state.items,
+    getItemCategories: state => {
+        let categories = state.items.filter(
+            (item) => item.types.includes("Food Group")
+        )
+
+        return categories
+    },
     getSet: state => Object.assign({}, state.recipes, state.items)
 }
 

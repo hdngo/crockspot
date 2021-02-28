@@ -7,10 +7,6 @@ const filterResults = (query, data)  => {
     )
 }
 
-const sortResults = () => {
-    console.log(3, 4)
-}
-
 const highlightTextMatches = (query, baseString) => {
     let regex = new RegExp(`${query}`, 'i')
     let subString = '';
@@ -32,6 +28,5 @@ const highlightTextMatches = (query, baseString) => {
 
 module.exports = {
     filterResults,
-    sortResults,
     highlightTextMatches
 }

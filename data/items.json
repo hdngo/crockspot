@@ -1,11 +1,13 @@
 [
     {
         "name": "Meats",
-        "type": "Food Group",
+        "types": [
+            "Food Group"
+        ],
         "description": "The true fruit of the earth!"
     },
     {
-        "name": "Fishes",
+        "name": "Fish",
         "types": [
             "Food Group"
         ],
@@ -60,16 +62,22 @@
         ]
     },
     {
-        "name": "Inedibles",
+        "name": "Inedible",
         "types": [
             "Food Group"
         ],
         "description": "Feed to WX-78."
     },
     {
+        "name": "Cooked",
+        "types": [
+            "Food Group"
+        ]
+    },
+    {
         "name": "Batilisk Wing",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "obtainedFrom": [
             "Batilisk"
@@ -78,7 +86,7 @@
     {
         "name": "Cooked Batilisk Wing",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": 0.5,
@@ -89,7 +97,7 @@
     {
         "name": "Drumstick",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": 1,
         "obtainedFrom": [
@@ -103,7 +111,7 @@
     {
         "name": "Fried Drumstick",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": 1,
@@ -115,11 +123,11 @@
         "name": "Live Eel",
         "types": [
             "Fish",
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
             "Fish": 1,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Oasis"
@@ -129,11 +137,11 @@
         "name": "Eel",
         "types": [
             "Fish",
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
             "Fish": 1,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Oasis"
@@ -143,12 +151,12 @@
         "name": "Cooked Eel",
         "types": [
             "Fish",
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
             "Fish": 1,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Eel"
@@ -158,11 +166,11 @@
         "name": "Freshwater Fish",
         "types": [
             "Fish",
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
             "Fish": 0.5,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Pond",
@@ -177,11 +185,11 @@
         "name": "Fish",
         "types": [
             "Fish",
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
             "Fish": 1,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Merm",
@@ -193,12 +201,12 @@
         "name": "Cooked Fish",
         "types": [
             "Fish",
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
             "Fish": 1,
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Fish"
@@ -207,10 +215,10 @@
     {
         "name": "Frog Legs",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Frog",
@@ -223,11 +231,11 @@
     {
         "name": "Cooked Frog Legs",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Frog Legs"
@@ -236,10 +244,10 @@
     {
         "name": "Koalefant Trunk",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
-            "Meat": 0
+            "Meats": 0
         },
         "obtainedFrom": [
             "Koalefant"
@@ -248,11 +256,11 @@
     {
         "name": "Koalefant Trunk Steak",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
-            "Meat": 0
+            "Meats": 0
         },
         "obtainedFrom": [
             "Koalefant Trunk",
@@ -262,22 +270,22 @@
     {
         "name": "Winter Koalefant Trunk",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
-            "Meat": 0
+            "Meats": 0
         },
         "obtainedFrom": [
             "Winter Koalefant"
         ]
     },
     {
-        "name": "Meat",
+        "name": "Meats",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
-            "Meat": 1
+            "Meats": 1
         },
         "obtainedFrom": [
             "Pig",
@@ -310,24 +318,24 @@
     {
         "name": "Cooked Meat",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
-            "Meat": 1
+            "Meats": 1
         },
         "obtainedFrom": [
-            "Meat"
+            "Meats"
         ]
     },
     {
         "name": "Monster Meat",
         "types": [
-            "Meat",
+            "Meats",
             "Monster Food"
         ],
         "foodValue": {
-            "Meat": 1,
+            "Meats": 1,
             "Monster Food": 1
         },
         "obtainedFrom": [
@@ -350,12 +358,12 @@
     {
         "name": "Cooked Monster Meat",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked",
             "Monster Food"
         ],
         "foodValue": {
-            "Meat": 1,
+            "Meats": 1,
             "Monster Food": 1
         },
         "obtainedFrom": [
@@ -365,10 +373,10 @@
     {
         "name": "Morsel",
         "types": [
-            "Meat"
+            "Meats"
         ],
         "foodValue": {
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Pengull",
@@ -384,11 +392,11 @@
     {
         "name": "Cooked Morsel",
         "types": [
-            "Meat",
+            "Meats",
             "Cooked"
         ],
         "foodValue": {
-            "Meat": 0.5
+            "Meats": 0.5
         },
         "obtainedFrom": [
             "Morsel"
@@ -397,11 +405,11 @@
     {
         "name": "Barnacles",
         "types": [
-            "Meat",
+            "Meats",
             "Fish"
         ],
         "foodValue": {
-            "Meat": 0.25,
+            "Meats": 0.25,
             "Fish": 0.25
         },
         "obtainedFrom": [
@@ -412,11 +420,11 @@
     {
         "name": "Cooked Barnacles",
         "types": [
-            "Meat",
+            "Meats",
             "Fish"
         ],
         "foodValue": {
-            "Meat": 0.25,
+            "Meats": 0.25,
             "Fish": 0.25
         },
         "obtainedFrom": [

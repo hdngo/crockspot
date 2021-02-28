@@ -22,14 +22,44 @@
 			v-if="results.length"
 		>
 			<button
-				@click="sortByNameDesc(results)"
+				@click="sortByNameDesc()"
 			>
-				desc
+				name desc
 			</button>
 			<button
-				@click="sortByNameAsc(results)"
+				@click="sortByNameAsc()"
 			>
-				asc
+				name asc
+			</button>
+			<button
+				@click="sortByHealthDesc()"
+			>
+				health desc
+			</button>
+			<button
+				@click="sortByHealthAsc()"
+			>
+				health asc
+			</button>
+			<button
+				@click="sortByHungerDesc()"
+			>
+				Hunger desc
+			</button>
+			<button
+				@click="sortByHungerAsc()"
+			>
+				Hunger asc
+			</button>
+			<button
+				@click="sortBySanityDesc()"
+			>
+				Sanity desc
+			</button>
+			<button
+				@click="sortBySanityAsc()"
+			>
+				Sanity asc
 			</button>
 			<ul class="search--results">
 				<SearchResult
@@ -48,8 +78,9 @@
 
 <script>
 import SearchResult from './SearchResult.vue'
-import { filterResults, sortResults, highlightTextMatches } from '../mixins/search'
+import { filterResults,  highlightTextMatches } from '../mixins/search'
 import { mapGetters } from 'vuex'
+import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
 
 export default {
 	name: 'MainSearchBar',
@@ -105,15 +136,29 @@ export default {
 			let nextItemIndex = this.focusedResultIndex + 1 % this.results.length
 			this.focusedResultIndex = nextItemIndex % this.results.length
 		},
-		sortByNameDesc(data) {
-			this.results = data.sort((a, b) => {
-				return a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1
-			})
+		sortByNameAsc() {
+			this.results = sortByPropsAsc(this.results, 'name')
 		},
-		sortByNameAsc(data) {
-			this.results = data.sort((a, b) => {
-				return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
-			})
+		sortByNameDesc() {
+			this.results = sortByPropsDesc(this.results, 'name')
+		},
+		sortByHealthAsc() {
+			this.results =  sortByPropsAsc(this.results, 'stats', 'health')
+		},
+		sortByHealthDesc() {
+			this.results =  sortByPropsDesc(this.results, 'stats', 'health')
+		},
+		sortByHungerAsc() {
+			this.results =  sortByPropsAsc(this.results, 'stats', 'hunger')
+		},
+		sortByHungerDesc() {
+			this.results =  sortByPropsDesc(this.results, 'stats', 'hunger')
+		},
+		sortBySanityAsc() {
+			this.results =  sortByPropsAsc(this.results, 'stats', 'sanity')
+		},
+		sortBySanityDesc() {
+			this.results =  sortByPropsDesc(this.results, 'stats', 'sanity')
 		}
 	}
 }
