@@ -21,46 +21,10 @@
 			class="search--results__wrapper"
 			v-if="results.length"
 		>
-			<button
-				@click="sortByNameDesc()"
-			>
-				name desc
-			</button>
-			<button
-				@click="sortByNameAsc()"
-			>
-				name asc
-			</button>
-			<button
-				@click="sortByHealthDesc()"
-			>
-				health desc
-			</button>
-			<button
-				@click="sortByHealthAsc()"
-			>
-				health asc
-			</button>
-			<button
-				@click="sortByHungerDesc()"
-			>
-				Hunger desc
-			</button>
-			<button
-				@click="sortByHungerAsc()"
-			>
-				Hunger asc
-			</button>
-			<button
-				@click="sortBySanityDesc()"
-			>
-				Sanity desc
-			</button>
-			<button
-				@click="sortBySanityAsc()"
-			>
-				Sanity asc
-			</button>
+			<SortItemButtons
+				:dataset="results"
+				@sorted="sortResults"
+			/>
 			<ul class="search--results">
 				<SearchResult
 					v-for="(item, i) in results"
@@ -78,6 +42,7 @@
 
 <script>
 import SearchResult from './SearchResult.vue'
+import SortItemButtons from './SortButtons.vue'
 import { filterResults,  highlightTextMatches } from '../mixins/search'
 import { mapGetters } from 'vuex'
 import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
@@ -85,14 +50,17 @@ import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
 export default {
 	name: 'MainSearchBar',
 	components: {
-		SearchResult
+		SearchResult,
+		SortItemButtons
 	},
 	props: {},
 	data () {
 		return {
 			searchQuery: '',
 			results: [],
-			focusedResultIndex: 0
+			focusedResultIndex: 0,
+			sorted: false,
+			sortProperty: ''
 		}
 	},
 	computed: {
@@ -106,10 +74,11 @@ export default {
 	methods: {
 		handleChange(e) {
 			if (this.searchQuery.length) {
-				let filteredResults = filterResults(this.searchQuery, this.recipes);
+				let filteredResults = this.sorted ? filterResults(this.searchQuery, this.results) : filterResults(this.searchQuery, this.recipes);
 				this.results = filteredResults.map(result => result)
 			} else {
 				this.results = [];
+				this.sorted = false
 			}
 		},
 		handleSubmit(e) {
@@ -136,30 +105,10 @@ export default {
 			let nextItemIndex = this.focusedResultIndex + 1 % this.results.length
 			this.focusedResultIndex = nextItemIndex % this.results.length
 		},
-		sortByNameAsc() {
-			this.results = sortByPropsAsc(this.results, 'name')
-		},
-		sortByNameDesc() {
-			this.results = sortByPropsDesc(this.results, 'name')
-		},
-		sortByHealthAsc() {
-			this.results =  sortByPropsAsc(this.results, 'stats', 'health')
-		},
-		sortByHealthDesc() {
-			this.results =  sortByPropsDesc(this.results, 'stats', 'health')
-		},
-		sortByHungerAsc() {
-			this.results =  sortByPropsAsc(this.results, 'stats', 'hunger')
-		},
-		sortByHungerDesc() {
-			this.results =  sortByPropsDesc(this.results, 'stats', 'hunger')
-		},
-		sortBySanityAsc() {
-			this.results =  sortByPropsAsc(this.results, 'stats', 'sanity')
-		},
-		sortBySanityDesc() {
-			this.results =  sortByPropsDesc(this.results, 'stats', 'sanity')
-		}
+		sortResults(value) {
+            this.sorted = true
+            this.results = filterResults(this.searchQuery, value).map(result => result)
+        }
 	}
 }
 </script>

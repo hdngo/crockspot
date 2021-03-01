@@ -30,7 +30,11 @@
                     :key="`${loDash(selectedCategory)}-item-${i}`"
                     class="carousel__item"
                 >
-                    {{ item.name }}
+                    <router-link
+                        :to="`/items/${loDash(item.name)}`"
+                    >
+                        {{ item.name }}
+                    </router-link>
                 </li>
             </ul>
             <button
@@ -224,7 +228,7 @@ export default {
             }
 
             if (nextItem) {
-                scrollArea.scrollTop = scrollArea.scrollTop + (nextItem.offsetTop - carouselBottom)
+                scrollArea.scrollTop = scrollArea.scrollTop + (nextItem.offsetTop - carouselBottom) - 1
             }
         }
     },
@@ -296,9 +300,13 @@ export default {
 }
 
 .carousel__item {
-    padding: 5px;
+    display: flex;
     margin: 10px;
     background-color: moccasin;
+
+    a {
+        padding: 5px;
+    }
 }
 
 .carousel__control {

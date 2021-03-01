@@ -1,6 +1,10 @@
 <template>
     <div>
         <MainSearchBar/>
+        <SortItemButtons
+            :dataset="recipes"
+            @sorted="sortRecipes"
+        />
         <div class="recipes">
             <router-link 
                 v-for="(recipe, i) in recipes"
@@ -27,25 +31,37 @@
 
 <script>
 import MainSearchBar from './MainSearchBar.vue'
+import SortItemButtons from './SortButtons.vue'
 import { mapGetters } from 'vuex'
 import { loDash } from '../helpers'
 
 export default {
     name: 'RecipeList',
     components: {
-        MainSearchBar
+        MainSearchBar,
+        SortItemButtons
+    },
+    data() {
+        return {
+            sorted: false,
+            sortedRecipes: []
+        }
     },
     computed: {
         ...mapGetters([
             "getRecipes"
         ]),
         recipes() {
-            return this.getRecipes
+            return this.sorted ? this.sortedRecipes : this.getRecipes
         }
     },
     methods: {
         loDash(string) {
             return loDash(string)
+        },
+        sortRecipes(value) {
+            this.sorted = true
+            this.sortedRecipes = value
         }
     }
 }
