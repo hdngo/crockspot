@@ -23,7 +23,6 @@ export default {
 
 html,
 body {
-	height: 100%;
 	width: 100%
 }
 
@@ -42,19 +41,19 @@ body {
 }
 
 a {
-	color: white;
 	text-decoration: none;
-	text-shadow: 2px 1px 3px lavender;
 	transition: all 0.4s ease-out;
-	
-	&:visited {
-		color: ivory;
-	}
+	text-shadow: 2px 1px 3px lavender;
+	color: indigo;
 
-	&:hover, &:focus {
-		color: lighten(plum, 10%);
-		text-shadow: 2px 1px 3px darkorchid;
-	}
+        &:visited {
+            color: lighten(indigo, 10%);
+        }
+
+        &:hover, &:focus {
+            color: lighten(indigo, 10%);
+            text-shadow: 2px 1px 3px plum;
+        }
 }
 
 ul {

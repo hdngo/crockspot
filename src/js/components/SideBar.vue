@@ -36,12 +36,16 @@
             <button
                 class="carousel__control carousel__control--prev"
                 ref="prevButton"
+                @click="handlePrevClick"
+                disabled
             >
                 Previous
             </button>
             <button
                 class="carousel__control carousel__control--next"
                 ref="nextButton"
+                @click="handleNextClick"
+                disabled
             >
                 Next
             </button>
@@ -97,6 +101,8 @@ export default {
         if (this.$refs.prevButton || this.$refs.nextButton) {
             this.carousel.firstItem = this.carousel.querySelector('.carousel__item:first-of-type')
             this.carousel.lastItem = this.carousel.querySelector('.carousel__item:last-of-type')
+            this.carousel.scrollArea = this.carousel.querySelector('.carousel__items')
+            this.carousel.items = this.carousel.querySelectorAll('.carousel__item')
         }
         
         if (this.carousel.prevButton) {
@@ -159,6 +165,67 @@ export default {
         },
         handleScroll() {
             console.log('scrolly')
+        },
+        handlePrevClick() {
+            console.log('prev')
+            this.scrollToPrev()
+        },
+        handleNextClick() {
+            console.log('next')
+            this.scrollToNext()
+        },
+        scrollToPrev() {
+            const itemMargin = 10
+            let items = this.carousel.items
+            let scrollArea = this.carousel.scrollArea
+            let clippedItem
+            let prevItem
+
+            let carouselTop = scrollArea.scrollTop
+
+            for (let i = 0; i < items.length; i++) {
+                let itemTop = items[i].offsetTop
+                if (itemTop < carouselTop) {
+                    clippedItem = items[i]
+                } else {
+                    clippedItem = items[i - 1]
+                    break
+                }
+            }
+            if (clippedItem) {
+                scrollArea.scrollTop = clippedItem.offsetTop - itemMargin
+            }
+        },
+        scrollToNext() {
+            const itemMargin = 10
+            let items = this.carousel.items
+            let scrollArea = this.carousel.scrollArea
+            let clippedItem
+            let nextItem
+            let carouselBottom = scrollArea.scrollTop ? scrollArea.offsetTop + scrollArea.offsetHeight + scrollArea.scrollTop : scrollArea.offsetTop + scrollArea.offsetHeight
+
+            for (let i = 0; i < items.length; i++) {
+                if (clippedItem) {
+                    break
+                }
+                let itemBottom = items[i].offsetTop + items[i].offsetHeight
+                if (itemBottom > carouselBottom) {
+                    clippedItem = items[i]
+                    if (i + 1 < items.length) {
+                        nextItem = items[i + 1]
+                    } else {
+                        nextItem = null
+                    }
+                }
+            }
+
+            if (clippedItem && !nextItem) {
+                scrollArea.scrollTop = scrollArea.scrollTop + clippedItem.offsetHeight + (itemMargin * 2)
+            }
+
+            if (nextItem) {
+                scrollArea.scrollTop = scrollArea.scrollTop + (nextItem.offsetTop - carouselBottom)
+            }
         }
     },
 }
@@ -221,6 +288,7 @@ export default {
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     
     &::-webkit-scrollbar {
         display: none;

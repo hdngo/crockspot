@@ -165,6 +165,10 @@ export default {
 </script>
 
 <style lang="scss">
+.search--main {
+	text-align: center;
+}
+
 .form__search {
 	font-size: 1.4em;
 	min-width: 17.8em;

@@ -58,6 +58,7 @@ li {
 
 .results__item {
     border: 2px solid transparent;
+    background-color: moccasin;
     border-radius: 4px;
     margin-top: 0.25em;
     margin-bottom: 0.25em;

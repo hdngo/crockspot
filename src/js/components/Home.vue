@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MainSearchBar />
+        <RecipeList />
 		<router-link to="/recipes">Recipes</router-link>
         <router-link to="/items">Items</router-link>
     </div>
@@ -8,11 +8,13 @@
 
 <script>
 import MainSearchBar from './MainSearchBar.vue';
+import RecipeList from './RecipeList.vue'
 
 export default {
     name: 'Home',
     components: {
-        MainSearchBar
+        MainSearchBar,
+        RecipeList
     }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Recipes</h1>
         <MainSearchBar/>
         <div class="recipes">
             <router-link 
@@ -64,6 +63,7 @@ export default {
         justify-content: center;
         align-items: center;
         padding: 10px;
+        background-color: moccasin;
         border: 2px solid indigo;
         margin: 5px;
         border-radius: 4px;
