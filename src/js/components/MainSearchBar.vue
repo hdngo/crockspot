@@ -53,14 +53,14 @@ export default {
 		SearchResult,
 		SortItemButtons
 	},
-	props: {},
 	data () {
 		return {
 			searchQuery: '',
 			results: [],
 			focusedResultIndex: 0,
 			sorted: false,
-			sortProperty: ''
+			sortProperty: '',
+			sortConfig: {}
 		}
 	},
 	computed: {
@@ -74,11 +74,18 @@ export default {
 	methods: {
 		handleChange(e) {
 			if (this.searchQuery.length) {
-				let filteredResults = this.sorted ? filterResults(this.searchQuery, this.results) : filterResults(this.searchQuery, this.recipes);
+				let filteredResults = filterResults(this.searchQuery, this.recipes)
+
+				if (this.results && this.sorted) {
+					let results = this.sortConfig.sortMethod.apply(null, [this.recipes, ...this.sortConfig.args])
+					filteredResults = filterResults(this.searchQuery, results)
+				}
+
 				this.results = filteredResults.map(result => result)
 			} else {
-				this.results = [];
+				this.results = []
 				this.sorted = false
+				this.sortConfig = {}
 			}
 		},
 		handleSubmit(e) {
@@ -107,7 +114,8 @@ export default {
 		},
 		sortResults(value) {
             this.sorted = true
-            this.results = filterResults(this.searchQuery, value).map(result => result)
+            this.results = filterResults(this.searchQuery, value.results).map(result => result)
+			this.sortConfig = {...value}
         }
 	}
 }

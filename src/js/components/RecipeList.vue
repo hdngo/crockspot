@@ -61,7 +61,7 @@ export default {
         },
         sortRecipes(value) {
             this.sorted = true
-            this.sortedRecipes = value
+            this.sortedRecipes = value.results
         }
     }
 }

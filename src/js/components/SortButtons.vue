@@ -48,6 +48,9 @@ import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
 
 export default {
     name: 'SortItemButtons',
+    data() {
+        return {}
+    },
     props: {
         dataset: {
             type: Array,
@@ -56,37 +59,59 @@ export default {
     },
     methods: {
         sortByNameAsc() {
-			let sortedResults =  sortByPropsAsc(this.dataset, 'name')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsAsc(this.dataset, 'name')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsAsc, args: ['name'] })
 		},
 		sortByNameDesc() {
-			let sortedResults =  sortByPropsDesc(this.dataset, 'name')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsDesc(this.dataset, 'name')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsDesc, args: ['name'] })
 		},
 		sortByHealthAsc() {
-			let sortedResults =   sortByPropsAsc(this.dataset, 'stats', 'health')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsAsc(this.dataset, 'stats', 'health')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsAsc, args: ['stats', 'health'] })
 		},
 		sortByHealthDesc() {
-			let sortedResults =   sortByPropsDesc(this.dataset, 'stats', 'health')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults =  sortByPropsDesc(this.dataset, 'stats', 'health')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsDesc, args: ['stats', 'health'] })
 		},
 		sortByHungerAsc() {
-			let sortedResults =   sortByPropsAsc(this.dataset, 'stats', 'hunger')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsAsc(this.dataset, 'stats', 'hunger')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsAsc, args: ['stats', 'hunger'] })
 		},
 		sortByHungerDesc() {
-			let sortedResults =   sortByPropsDesc(this.dataset, 'stats', 'hunger')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsDesc(this.dataset, 'stats', 'hunger')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsDesc, args: ['stats', 'hunger'] })
 		},
 		sortBySanityAsc() {
-			let sortedResults =   sortByPropsAsc(this.dataset, 'stats', 'sanity')
-            this.$emit('sorted', sortedResults)
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsAsc(this.dataset, 'stats', 'sanity')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsAsc, args: ['stats', 'sanity'] })
 		},
 		sortBySanityDesc() {
-			let sortedResults =   sortByPropsDesc(this.dataset, 'stats', 'sanity')
-            this.$emit('sorted', sortedResults)
-		}
+            this.updateActiveButton(event)
+			let sortedResults = sortByPropsDesc(this.dataset, 'stats', 'sanity')
+            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsDesc, args: ['stats', 'hunger'] })
+		},
+        updateActiveButton(event) {
+            let activeButton = this.$el.querySelector('.active')
+            if (activeButton && activeButton !== event.target) {
+                activeButton.classList.remove('active')
+            }
+
+            event.target.classList.add('active')
+        }
     }
 }
 </script>
+
+<style lang="scss" scoped>
+button.active {
+    background-color: green;
+}
+</style>
