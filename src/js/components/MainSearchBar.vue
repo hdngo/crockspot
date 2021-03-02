@@ -1,5 +1,5 @@
 <template>
-	<div class="search--main">
+	<div class="search search--main">
 		<form 
 			class="form form--main"
 			@submit.prevent
@@ -7,7 +7,7 @@
 			<input 
 				class="form__input form__search"
 				type="text"
-				placeholder="Type something to get started"
+				placeholder="Search"
 				autocomplete="off"
 				v-model="searchQuery"
 				@input="handleChange"
@@ -15,6 +15,7 @@
 				@focus="handleFocus"
 				@keydown.up="cycleUp"
 				@keydown.down="cycleDown"
+				@blur="handleBlur"
 			>
 		</form>
 		<div 
@@ -116,7 +117,11 @@ export default {
             this.sorted = true
             this.results = filterResults(this.searchQuery, value.results).map(result => result)
 			this.sortConfig = {...value}
-        }
+        },
+		handleBlur() {
+			console.log('lost')
+			this.$emit('inputBlur', {focused: false})
+		}
 	}
 }
 </script>
@@ -124,6 +129,7 @@ export default {
 <style lang="scss">
 .search--main {
 	text-align: center;
+	position: relative;
 }
 
 .form__search {
@@ -140,7 +146,19 @@ export default {
 	font-weight: 600;
 }
 
-.search__results {
+.search--results__wrapper {
+	position: absolute;
+	width: 100%;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.search--results {
 	padding: 0;
 }
 </style>

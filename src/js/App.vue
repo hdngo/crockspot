@@ -1,16 +1,19 @@
 <template>
 	<div id="app">
+		<NavBar />
 		<Sidebar />
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
+import NavBar from './components/NavBar.vue'
 import Sidebar from './components/SideBar.vue'
 
 export default {
 	name: 'App',
 	components: {
+		NavBar,
 		Sidebar
 	}
 
@@ -31,8 +34,8 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding-top: 200px;
-	padding-bottom: 150px;
+	padding-top: 125px;
+	padding-bottom: 125px;
 	padding-left: 80px;
 	padding-right: 80px;
 	position: relative;

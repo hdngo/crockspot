@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MainSearchBar/>
+        <!-- <MainSearchBar/> -->
         <SortItemButtons
             :dataset="recipes"
             @sorted="sortRecipes"
@@ -70,12 +70,12 @@ export default {
 <style lang="scss">
 .recipes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     
     .recipe__item {
         display: flex;
-        flex: 1 1 25%;
+        flex: 1 1 20%;
         justify-content: center;
         align-items: center;
         padding: 10px;

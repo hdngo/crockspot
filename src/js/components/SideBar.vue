@@ -53,6 +53,10 @@
             >
                 Next
             </button>
+            <div 
+                class="carousel__control carousel__close"
+                @click="closeCarousel"
+            />
         </div>
     </aside>
 </template>
@@ -171,11 +175,9 @@ export default {
             console.log('scrolly')
         },
         handlePrevClick() {
-            console.log('prev')
             this.scrollToPrev()
         },
         handleNextClick() {
-            console.log('next')
             this.scrollToNext()
         },
         scrollToPrev() {
@@ -230,6 +232,11 @@ export default {
             if (nextItem) {
                 scrollArea.scrollTop = scrollArea.scrollTop + (nextItem.offsetTop - carouselBottom) - 1
             }
+        },
+        closeCarousel() {
+            this.carousel.classList.add('carousel--hidden')
+            this.selectedCategory = null
+            this.selectedCategoryItems = []
         }
     },
 }
@@ -241,21 +248,22 @@ export default {
     flex-direction: column;
     align-items: center;
     flex: 0 0 auto;
-    padding: 10px 5px;
-    background-color: rgb(104, 62, 48);
+    padding: 5px 5px;
+    background-color: white;
     border: 4px solid black;
-    position: absolute;
+    position: fixed;
     left: 0;
 }
 
 .menu {
-    padding: 5px;
-    background-color: rgb(41, 14, 4);
+    // padding: 5px;
+    background-color: purple;
     border: 2px solid black;
+    margin: 0;
 }
 
 .menu__item {
-    background-color: moccasin;
+    background-color: white;
     border: 2px solid black;
     padding: 5px;
     margin: 5px;
@@ -276,7 +284,7 @@ export default {
 }
 
 .carousel {
-    background-color: rgb(41, 14, 4);
+    background-color: purple;
     position: absolute;
     left: calc(100% + 20px);
     height: 100%;
@@ -293,6 +301,8 @@ export default {
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    padding: 5px;
+    border: 4px solid black;
     
     &::-webkit-scrollbar {
         display: none;
@@ -302,7 +312,8 @@ export default {
 .carousel__item {
     display: flex;
     margin: 10px;
-    background-color: moccasin;
+    background-color: white;
+    border: 2px solid black;
 
     a {
         padding: 5px;
@@ -314,10 +325,29 @@ export default {
 }
 
 .carousel__control--prev {
-    bottom: 100%;
+    bottom: calc(100% + 5px);
+    left: calc(50% - 38px);
 }
 
 .carousel__control--next {
-    top: 100%;
+    top: calc(100% + 5px);
+    left: calc(50% - 25px);
+}
+
+.carousel__close {
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: calc(50% - 10px);
+    right: 100%;
+
+    &:hover {
+        border-right: 20px solid darken(violet, 70%);
+        cursor: pointer;
+    }
 }
 </style>

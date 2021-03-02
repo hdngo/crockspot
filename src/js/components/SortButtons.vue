@@ -111,6 +111,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sort--options {
+    text-align: right;
+    margin: 5px;
+}
+
 button.active {
     background-color: green;
 }

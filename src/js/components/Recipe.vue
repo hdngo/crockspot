@@ -1,7 +1,12 @@
 <template>
-<div>
-    {{ this.recipe.name }}
+<div class="recipe__page">
+    <figure class="recipe__picture">
+        <div class="placeholder__image">
+
+        </div>
+    </figure>
     <div class="recipe__info">
+        {{ this.recipe.name }}
         <div class="stats">
             <div class="stats--nutrition">
                 <ul class="results__stats">
@@ -107,3 +112,17 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.recipe__page {
+    width: 100%;
+    padding: 0 150px;
+}
+
+.placeholder__image {
+    height: 400px;
+    width: 400px;
+    background-color: lightgrey;
+}
+
+</style>
