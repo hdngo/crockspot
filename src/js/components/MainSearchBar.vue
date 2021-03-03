@@ -84,9 +84,7 @@ export default {
 
 				this.results = filteredResults.map(result => result)
 			} else {
-				this.results = []
-				this.sorted = false
-				this.sortConfig = {}
+				this.reset()
 			}
 		},
 		handleSubmit(e) {
@@ -119,8 +117,16 @@ export default {
 			this.sortConfig = {...value}
         },
 		handleBlur() {
-			console.log('lost')
-			this.$emit('inputBlur', {focused: false})
+			this.reset()
+			// this.$emit('inputBlur', {focused: false})
+		},
+		reset() {
+			this.searchQuery = ''
+			this.results = []
+			this.focusedResultIndex= 0
+			this.sorted= false
+			this.sortProperty = ''
+			this.sortConfig = {}
 		}
 	}
 }

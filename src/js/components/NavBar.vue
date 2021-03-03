@@ -22,6 +22,9 @@ export default {
     methods: {
         handleBlur(value) {
             console.log(value.focused)
+            /* if (!value.focused) {
+                // this.$refs.navSearch.$el.
+            } */
         }
     }
 }
@@ -45,7 +48,7 @@ export default {
         }
         .form__search {
             font-size: 0.8em;
-            min-width: 3em;
+            min-width: 5.5em;
             padding: 0.8em;
 
             border-radius: 1.5em;

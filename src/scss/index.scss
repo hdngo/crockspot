@@ -1,2 +1,2 @@
-@use './base';
-@use './breakpoints';
+@forward './base';
+@forward './breakpoints';

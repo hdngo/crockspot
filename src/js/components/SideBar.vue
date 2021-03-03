@@ -13,6 +13,9 @@
                     :to="`/items/${loDash(category.name)}`"
                 >
                     {{ category.name }}
+                     <img
+                        :src="`../../../assets/imgs/${category.imageName}`"
+                    />
                 </router-link>
             </li>
         </ul>

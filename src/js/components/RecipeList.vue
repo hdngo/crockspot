@@ -68,6 +68,8 @@ export default {
 </script>
 
 <style lang="scss">
+@use "../../scss/index";
+
 .recipes {
     display: flex;
     justify-content: center;
@@ -75,7 +77,7 @@ export default {
     
     .recipe__item {
         display: flex;
-        flex: 1 1 20%;
+        flex: 1 1 100%;
         justify-content: center;
         align-items: center;
         padding: 10px;
@@ -83,6 +85,18 @@ export default {
         border: 2px solid indigo;
         margin: 5px;
         border-radius: 4px;
+
+        @include index.breakpoint('m') {
+            flex-basis: 45%;
+        }
+
+        @include index.breakpoint('l') {
+            flex-basis: 30%;
+        }
+
+        @include index.breakpoint('xl') {
+            flex-basis: 20%;
+        }
     }
 }
 </style>
