@@ -4,75 +4,86 @@
         "types": [
             "Food Group"
         ],
-        "description": "The true fruit of the earth!"
+        "description": "The true fruit of the earth!",
+        "imageName": "meat.png"
     },
     {
         "name": "Fish",
         "types": [
             "Food Group"
         ],
-        "description": "Meat of the sea!"
+        "description": "Meat of the sea!",
+        "imageName": "fish.png"
     },
     {
         "name": "Eggs",
         "types": [
             "Food Group"
         ],
-        "description": "Will it hatch?"
+        "description": "Will it hatch?",
+        "imageName": "eggs.png"
     },
     {
         "name": "Fruits",
         "types": [
             "Food Group"
         ],
-        "description": "IT HAS HEALING PROPERTIES"
+        "description": "IT HAS HEALING PROPERTIES",
+        "imageName": "fruit.png"
     },
     {
         "name": "Vegetables",
         "types": [
             "Food Group"
         ],
-        "description": "What seeds shall I sow?"
+        "description": "What seeds shall I sow?",
+        "imageName": "vegetables.png"
     },
     {
         "name": "Sweetener",
         "types": [
             "Food Group"
         ],
-        "description": "Is yum!"
+        "description": "Is yum!",
+        "imageName": "sweeteners.png"
     },
     {
         "name": "Monster Food",
         "types": [
             "Food Group"
         ],
-        "description": "Ugh. I don't think I should eat that."
+        "description": "Ugh. I don't think I should eat that.",
+        "imageName": "monster-foods.png"
     },
     {
         "name": "Dairy",
         "types": [
             "Food Group"
         ],
-        "description": "A glass of milk with every supper."
+        "description": "A glass of milk with every supper.",
+        "imageName": "dairy.png"
     },
     {
         "name": "Filler",
         "types": [
             "Food Group"
-        ]
+        ],
+        "imageName": "filler.png"
     },
     {
         "name": "Inedible",
         "types": [
             "Food Group"
         ],
-        "description": "Feed to WX-78."
+        "description": "Feed to WX-78.",
+        "imageName": "inedibles.png"
     },
     {
         "name": "Cooked",
         "types": [
             "Food Group"
-        ]
+        ],
+        "imageName": "campfire.png"
     },
     {
         "name": "Batilisk Wing",

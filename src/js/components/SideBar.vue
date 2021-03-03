@@ -7,14 +7,16 @@
                 v-for="(category, i) in categories"
                 :key="`category-${category}-${i}`"
                 class="menu__item"
+                :class="{'menu__item--active': selectedCategory === category.name}"
                 @click="handleClick(category.name)"
             >
                 <router-link
                     :to="`/items/${loDash(category.name)}`"
                 >
-                    {{ category.name }}
                      <img
-                        :src="`../../../assets/imgs/${category.imageName}`"
+                        :src="`/images/${category.imageName}`"
+                        :alt="category.name"
+                        class="menu__image"
                     />
                 </router-link>
             </li>
@@ -67,6 +69,7 @@
 <script>
 import { loDash } from '../helpers'
 import { mapGetters } from 'vuex'
+import * as Images from '../mixins/images'
 
 export default {
     name: 'Sidebar',
@@ -284,6 +287,15 @@ export default {
             text-shadow: 2px 1px 3px plum;
         }
     }
+}
+
+.menu__item--active {
+    background-color: moccasin;
+}
+
+.menu__image {
+    height: 44px;
+    width: 44px;
 }
 
 .carousel {
