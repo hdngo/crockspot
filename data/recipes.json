@@ -260,7 +260,7 @@
         ]
     },
     {
-        "name": "Francy Spiralled Tubers",
+        "name": "Fancy Spiralled Tubers",
         "stats": {
             "health": 3,
             "hunger": 37.5,
@@ -963,31 +963,6 @@
             {
                 "name": "Vegetables",
                 "quantity": 1
-            }
-        ],
-        "restrictions": []
-    },
-    {
-        "name": "Vegetable Stinger",
-        "stats": {
-            "health": 3,
-            "hunger": 25,
-            "sanity": 33
-        },
-        "perishTime": 15,
-        "cookTime": 10,
-        "ingredients": [
-            {
-                "name": "Toma Root",
-                "quantity": 1
-            },
-            {
-                "name": "Ice",
-                "quantity": 1
-            },
-            {
-                "name": "Vegetables",
-                "quantity": 1.5
             }
         ],
         "restrictions": []

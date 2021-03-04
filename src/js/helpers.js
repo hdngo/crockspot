@@ -7,7 +7,7 @@ const convertParamToName = (param) => {
 }
 
 const loDash = (string) => {
-    return string.toLowerCase().split(' ').join('-')
+    return string.toLowerCase().replace(/'/g, " ").split(' ').join('-')
 }
 
 const sortByPropsAsc = (data, prop, nestedProp) => {

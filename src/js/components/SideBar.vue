@@ -39,6 +39,11 @@
                         :to="`/items/${loDash(item.name)}`"
                     >
                         {{ item.name }}
+                        <img
+                            class="carousel__image"
+                            :src="`/images/${loDash(item.name)}.png`"
+                            :alt="item.name"
+                        />
                     </router-link>
                 </li>
             </ul>
@@ -269,11 +274,15 @@ export default {
 }
 
 .menu__item {
-    background-color: white;
+    background-color: darken(moccasin, 5%);
     border: 2px solid black;
     padding: 5px;
     margin: 5px;
     color: indigo;
+
+    &:hover {
+        background-color: lighten(moccasin, 5%);
+    }
 
     a {
         color: indigo;
@@ -290,10 +299,12 @@ export default {
 }
 
 .menu__item--active {
-    background-color: moccasin;
+    background-color: darken(moccasin, 25%);
+    box-shadow: inset 0 0 2px rgba(0,0,0, .6);
 }
 
-.menu__image {
+.menu__image,
+.carousel__image {
     height: 44px;
     width: 44px;
 }
