@@ -470,7 +470,7 @@
         ]
     },
     {
-        "name": "Tallbird Egg",
+        "name": "Tallbird Eggs",
         "types": [
             "Eggs"
         ],
@@ -1099,7 +1099,7 @@
         },
         "obtainedFrom": [
             "Lunar Mushtrees",
-            "Naked Mole Bat Burrows"
+            "Naked Mole Rat Burrows"
         ]
     },
     {
@@ -1115,6 +1115,7 @@
             "Killer Bee",
             "Beehive",
             "Killer Beehive",
+            "Gigantic Beehive",
             "Bee Box",
             "Bee Queen"
         ]
@@ -1130,6 +1131,7 @@
         "obtainedFrom": [
             "Beehive",
             "Killer Beehive",
+            "Gigantic Beehive",
             "Bee Queen"
         ]
     },

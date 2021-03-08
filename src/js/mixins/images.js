@@ -2,7 +2,7 @@
 const baconandeggs = require('../../../assets/imgs/bacon-and-eggs.png')
 const banana = require('../../../assets/imgs/banana.png')
 const bananapop = require('../../../assets/imgs/banana-pop.png')
-const barnacle = require('../../../assets/imgs/barnacle.png')
+const barnacles = require('../../../assets/imgs/barnacles.png')
 const barnaclelinguine = require('../../../assets/imgs/barnacle-linguine.png')
 const barnaclenigiri = require('../../../assets/imgs/barnacle-nigiri.png')
 const barnaclepita = require('../../../assets/imgs/barnacle-pita.png')
@@ -44,7 +44,7 @@ const ice = require('../../../assets/imgs/ice.png')
 const jellysalad = require('../../../assets/imgs/jelly-salad.png')
 const juicyberries = require('../../../assets/imgs/juicy-berries.png')
 const kabobs = require('../../../assets/imgs/kabobs.png')
-const kelpfrond = require('../../../assets/imgs/kelp-frond.png')
+const kelpfronds = require('../../../assets/imgs/kelp-fronds.png')
 const leafymeat = require('../../../assets/imgs/leafy-meat.png')
 const leafymeatloaf = require('../../../assets/imgs/leafy-meatloaf.png')
 const lichen = require('../../../assets/imgs/lichen.png')
@@ -169,11 +169,55 @@ const redbird = require('../../../assets/imgs/redbird.png')
 const snowbird = require('../../../assets/imgs/snowbird.png')
 const rabbit = require('../../../assets/imgs/rabbit.png')
 const cookedmorsel = require('../../../assets/imgs/cooked-morsel.png')
-
-
-
-
-
+const cookedbarnacles = require('../../../assets/imgs/cooked-barnacles.png')
+const cookedegg = require('../../../assets/imgs/cooked-egg.png')
+const roastedberries = require('../../../assets/imgs/roasted-berries.png')
+const prepareddragonfruit = require('../../../assets/imgs/prepared-dragon-fruit.png')
+const extrasmellydurian = require('../../../assets/imgs/extra-smelly-durian.png')
+const slicedpomegranate = require('../../../assets/imgs/sliced-pomegranate.png')
+const pomegranate = require('../../../assets/imgs/pomegranate.png')
+const grilledwatermelon = require('../../../assets/imgs/grilled-watermelon.png')
+const cookedjuicyberries = require('../../../assets/imgs/cooked-juicy-berries.png')
+const rabbithutch = require('../../../assets/imgs/rabbit-hutch.png')
+const roastedcarrot = require('../../../assets/imgs/roasted-carrot.png')
+const popcorn = require('../../../assets/imgs/popcorn.png')
+const braisedeggplant = require('../../../assets/imgs/braised-eggplant.png')
+const cookedbluecap = require('../../../assets/imgs/cooked-blue-cap.png')
+const bluemushtree = require('../../../assets/imgs/blue-mushtree.png')
+const cookedgreencap = require('../../../assets/imgs/cooked-green-cap.png')
+const greenmushtree = require('../../../assets/imgs/green-mushtree.png')
+const cookedredcap = require('../../../assets/imgs/cooked-red-cap.png')
+const redmushtree = require('../../../assets/imgs/red-mushtree.png')
+const cookedmandrake = require('../../../assets/imgs/cooked-mandrake.png')
+const cookedcactusflesh = require('../../../assets/imgs/cooked-cactus-flesh.png')
+const cactusflower = require('../../../assets/imgs/cactus-flower.png')
+const seaweedplants = require('../../../assets/imgs/seaweed-plants.png')
+const roastedseaweed = require('../../../assets/imgs/roasted-seaweed.png')
+const sweetpotato = require('../../../assets/imgs/sweet-potato.png')
+const cookedsweetpotato = require('../../../assets/imgs/cooked-sweet-potato.png')
+const cookedkelpfronds = require('../../../assets/imgs/cooked-kelp-fronds.png')
+const roastedgarlic = require('../../../assets/imgs/roasted-garlic.png')
+const roastedonion = require('../../../assets/imgs/roasted-onion.png')
+const pepper = require('../../../assets/imgs/pepper.png')
+const roastedpepper = require('../../../assets/imgs/roasted-pepper.png')
+const potato = require('../../../assets/imgs/potato.png')
+const roastedpotato = require('../../../assets/imgs/roasted-potato.png')
+const roastedtomaroot = require('../../../assets/imgs/roasted-toma-root.png')
+const cookedmoonshroom = require('../../../assets/imgs/cooked-moon-shroom.png')
+const lunarmushtrees = require('../../../assets/imgs/lunar-mushtrees.png')
+const nakedmoleratbrows = require('../../../assets/imgs/naked-mole-rat-burrows.png')
+const queenbee = require('../../../assets/imgs/naked-mole-rat-burrows.png')
+const bee = require('../../../assets/imgs/bee.png')
+const killerbee = require('../../../assets/imgs/killer-bee.png')
+const beehive = require('../../../assets/imgs/beehive.png')
+const killerbeehive = require('../../../assets/imgs/killer-beehive.png')
+const giganticbeehive = require('../../../assets/imgs/gigantic-beehive.png')
+const beebox = require('../../../assets/imgs/beebox.png')
+const butterfly = require('../../../assets/imgs/butterfly.png')
+const birchnuttree = require('../../../assets/imgs/birchnut-tree.png')
+const spikytree = require('../../../assets/imgs/spiky-tree.png')
+const birchnutter = require('../../../assets/imgs/birchnutter.png')
+const twigs = require('../../../assets/imgs/twigs.png')
 
 module.exports = {
     meat: meat,
@@ -193,7 +237,7 @@ module.exports = {
     baconandeggs: baconandeggs,
     banana: banana,
     bananapop: bananapop,
-    barnacle: barnacle,
+    barnacles: barnacles,
     barnaclelinguine: barnaclelinguine,
     barnaclenigiri: barnaclenigiri,
     barnaclepita: barnaclepita,
@@ -234,7 +278,7 @@ module.exports = {
     jellysalad: jellysalad,
     juicyberries: juicyberries,
     kabobs: kabobs,
-    kelpfrond: kelpfrond,
+    kelpfronds: kelpfronds,
     leafymeat: leafymeat,
     leafymeatloaf: leafymeatloaf,
     lichen: lichen,
@@ -250,6 +294,7 @@ module.exports = {
     mushycake: mushycake,
     onions: onions,
     peppers: peppers,
+    pepper: pepper,
     pierogi: pierogi,
     potatoes: potatoes,
     pumpkin: pumpkin,
@@ -340,5 +385,54 @@ module.exports = {
     redbird: redbird,
     snowbird: snowbird,
     rabbit: rabbit,
-    cookedmorsel: cookedmorsel
+    cookedmorsel: cookedmorsel, // stopped at cooked morsel and rabbit
+    cookedbarnacles: cookedbarnacles,
+    cookedegg: cookedegg,
+    roastedberries: roastedberries,
+    prepareddragonfruit: prepareddragonfruit,
+    extrasmellydurian: extrasmellydurian,
+    slicedpomegranate: slicedpomegranate,
+    pomegranate: pomegranate,
+    grilledwatermelon: grilledwatermelon,
+    cookedjuicyberries: cookedjuicyberries,
+    rabbithutch: rabbithutch,
+    roastedcarrot: roastedcarrot,
+    popcorn: popcorn,
+    braisedeggplant: braisedeggplant,
+    cookedbluecap: cookedbluecap,
+    bluemushtree: bluemushtree,
+    cookedgreencap: cookedgreencap,
+    greenmushtree: greenmushtree,
+    cookedredcap: cookedredcap,
+    redmushtree: redmushtree,
+    cookedmandrake: cookedmandrake,
+    cookedcactusflesh: cookedcactusflesh,
+    cactusflower: cactusflower,
+    seaweedplants: seaweedplants,
+    roastedseaweed: roastedseaweed,
+    sweetpotato: sweetpotato,
+    cookedsweetpotato: cookedsweetpotato,
+    cookedkelpfronds: cookedkelpfronds,
+    roastedgarlic: roastedgarlic,
+    roastedonion: roastedonion,
+    pepper: pepper,
+    roastedpepper: roastedpepper,
+    potato: potato,
+    roastedpotato: roastedpotato,
+    roastedtomaroot: roastedtomaroot,
+    cookedmoonshroom: cookedmoonshroom,
+    lunarmushtrees: lunarmushtrees,
+    nakedmoleratbrows: nakedmoleratbrows,
+    queenbee: queenbee,
+    bee: bee,
+    killerbee: killerbee,
+    beehive: beehive,
+    killerbeehive: killerbeehive,
+    giganticbeehive: giganticbeehive,
+    beebox: beebox,
+    butterfly: butterfly,
+    birchnuttree: birchnuttree,
+    spikytree: spikytree,
+    birchnutter: birchnutter,
+    twigs: twigs
 }
