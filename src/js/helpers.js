@@ -10,6 +10,7 @@ const convertParamToName = (param) => {
     }
 }
 
+// not the lodash you're thinking of
 const loDash = (string) => {
     return string.toLowerCase().replace(/'/g, " ").split(' ').join('-')
 }

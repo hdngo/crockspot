@@ -49,10 +49,10 @@ module.exports = {
 					filename: 'static/[hash][ext][query]'
 				} */
 			},
-			/* {
+			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
-				type: 'aseet/resource',
-			} */
+				type: 'asset/resource',
+			},
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader'

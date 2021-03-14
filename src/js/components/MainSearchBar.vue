@@ -11,7 +11,6 @@
 				autocomplete="off"
 				v-model="searchQuery"
 				@input="handleChange"
-				@keyup.esc="closeOnEsc"
 			>
 		</form>
 		<div 
@@ -81,6 +80,9 @@ export default {
 		hasScreen() {
 			return this.getScreenActiveState
 		}
+	},
+	mounted() {
+		window.addEventListener('keyup', this.closeOnEsc)
 	},
 	methods: {
 		...mapActions([
@@ -155,7 +157,9 @@ export default {
 			this.setScreenState(false)
 		},
 		closeOnEsc() {
-			this.reset()
+			if (event.code === "Escape") {
+				this.reset()
+			}
 		}
 	}
 }

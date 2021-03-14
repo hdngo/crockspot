@@ -80,7 +80,7 @@ li {
 .results__item {
     border: 2px solid lighten(indigo, 10%);
     background-color: lighten(moccasin, 10%);
-    border-radius: 4px;
+    border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0.8em;

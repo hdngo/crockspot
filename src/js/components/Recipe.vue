@@ -173,6 +173,7 @@ export default {
     padding: 50px;
     background-color: lighten(moccasin, 15%);
     border: 4px solid indigo;
+    border-radius: 10px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -253,9 +254,11 @@ export default {
 
 .ingredient__image__wrapper,
 .restriction__image__wrapper {
-    border: 1px solid black;
+    border: 2px solid darken(moccasin, 10%);
+    border-radius: 10px;
     margin: 5px;
     background-color: lighten(moccasin, 10%);
+    transition: all 0.5s ease-in-out;
 
     &:hover {
         background-color: darken(moccasin, 15%);

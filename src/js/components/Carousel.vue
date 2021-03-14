@@ -268,6 +268,7 @@ export default {
     position: absolute;
     left: calc(100% + 20px);
     height: 100%;
+    border-radius: 10px;
 }
 
 .carousel__items {
@@ -279,6 +280,7 @@ export default {
     scroll-behavior: smooth;
     padding: 5px;
     border: 4px solid black;
+    border-radius: 10px;
     
     &::-webkit-scrollbar {
         display: none;
@@ -290,6 +292,8 @@ export default {
     margin: 10px;
     background-color: lighten(moccasin, 5%);
     border: 2px solid black;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         background-color: darken(moccasin, 15%);
@@ -304,14 +308,44 @@ export default {
     position: absolute;
 }
 
+.carousel__control--prev,
+.carousel__control--next {
+    background-color: lighten(moccasin, 5%);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: plum;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        &:not(:disabled) {
+            background-color: darken(moccasin, 15%);
+            cursor: pointer;
+            color: indigo;
+            font-weight: 700;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.carousel__control:disabled {
+    background-color: lighten(moccasin, 10%);
+    border-color: moccasin;
+    color: lightgrey;
+}
+
 .carousel__control--prev {
     bottom: calc(100% + 5px);
-    left: calc(50% - 38px);
+    left: calc(50% - 48px);
 }
 
 .carousel__control--next {
     top: calc(100% + 5px);
-    left: calc(50% - 25px);
+    left: calc(50% - 30px);
 }
 
 .carousel__close {

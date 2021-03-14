@@ -72,15 +72,18 @@ export default {
         font-size: 1.2em;
         width: 100%;
         padding: 0.5em 3em;
-        border-radius: 0.7em;
+        border-radius: 10px;
         border: 1px solid indigo;
         box-shadow: 0 0 3pt 2pt transparent;
         transition: all 0.4s ease-in-out;
         outline: none;
+        color: plum;
 
         &:focus {
             outline: none;
             box-shadow: 0 0 3pt 2pt plum;
+            color: purple;
+            font-weight: 600;
         }
 
         @include index.breakpoint('l'){
@@ -101,7 +104,7 @@ export default {
         overflow-x: hidden;
         background-color: lighten(moccasin, 35%);
         border: 4px solid indigo;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 0px 10px;
     }
 

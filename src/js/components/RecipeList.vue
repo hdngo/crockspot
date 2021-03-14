@@ -106,6 +106,7 @@ export default {
         padding: 25px;
         background-color: lighten(moccasin, 10%);
         border: 2px solid indigo;
+        border-radius: 10px;
         margin: 10px;
         border-radius: 4px;
 

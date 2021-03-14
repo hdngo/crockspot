@@ -81,6 +81,7 @@ export default {
         padding: 5px 5px;
         background-color: white;
         border: 4px solid black;
+        border-radius: 10px;
         position: fixed;
         left: 25px;
     }
@@ -89,15 +90,18 @@ export default {
 .menu {
     background-color: purple;
     border: 2px solid black;
+    border-radius: 10px;
     margin: 0;
 }
 
 .menu__item {
     background-color: lighten(moccasin, 10%);
     border: 2px solid black;
+    border-radius: 10px;
     padding: 5px;
     margin: 5px;
     color: indigo;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         background-color: darken(moccasin, 15%);
