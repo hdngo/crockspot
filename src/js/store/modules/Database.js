@@ -1,5 +1,6 @@
 import Recipes from '../../../../data/recipes.json'
 import Items from '../../../../data/items.json'
+import { sortByPropsAsc } from '../../helpers'
 
 const DATABASE = {
     recipes: Recipes,
@@ -21,7 +22,13 @@ const getters = {
 
         return categories
     },
-    getSet: state => Object.assign({}, state.recipes, state.items)
+    getInventory: (state) => {
+        let inventory = []
+        let inventoryObj = [...state.recipes, ...state.items]
+        inventoryObj.forEach(item => inventory.push(item))
+
+        return sortByPropsAsc(inventory, 'name')
+    }
 }
 
 export default {

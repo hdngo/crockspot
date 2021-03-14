@@ -7,96 +7,121 @@
 			<input 
 				class="form__input form__search"
 				type="text"
-				placeholder="Search"
+				placeholder="Search for an item"
 				autocomplete="off"
 				v-model="searchQuery"
 				@input="handleChange"
-				@keyup.enter="handleSubmit"
-				@focus="handleFocus"
-				@keydown.up="cycleUp"
-				@keydown.down="cycleDown"
-				@blur="handleBlur"
+				@keyup.esc="closeOnEsc"
 			>
 		</form>
 		<div 
 			class="search--results__wrapper"
-			v-if="results.length"
+			v-if="searchQuery.length"
 		>
-			<SortItemButtons
+			<!-- <SortItemButtons
 				:dataset="results"
 				@sorted="sortResults"
-			/>
-			<ul class="search--results">
+			/> -->
+			<ul 
+				v-if="results.length"
+				class="search--results"
+			>
 				<SearchResult
 					v-for="(item, i) in results"
 					:key="`item-${i}`"
-					:class="[
-						{ 'focused' : focusedResultIndex === i }
-					]"
 					:name="highlightTextMatches(results[i].name)"
 					:itemData="results[i]"
+					@selected="handleSelected"
 				/>
+			</ul>
+			<ul
+				v-if="(!results.length && searchQuery.length)"
+				class="search--results"
+			>
+				<li>
+					<p>No results found for <em>{{ searchQuery }}</em></p>
+				</li>
 			</ul>
 		</div>
 	</div>
 </template>
 
 <script>
+import { loDash } from '../helpers'
 import SearchResult from './SearchResult.vue'
-import SortItemButtons from './SortButtons.vue'
 import { filterResults,  highlightTextMatches } from '../mixins/search'
-import { mapGetters } from 'vuex'
-import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
+import { mapGetters, mapActions } from 'vuex'
+// import SortItemButtons from './SortButtons.vue'
+// import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
 
 export default {
 	name: 'MainSearchBar',
 	components: {
 		SearchResult,
-		SortItemButtons
+		// SortItemButtons
 	},
 	data () {
 		return {
 			searchQuery: '',
 			results: [],
-			focusedResultIndex: 0,
-			sorted: false,
-			sortProperty: '',
-			sortConfig: {}
+			// focusedResultIndex: 0,
+			// sorted: false,
+			// sortProperty: '',
+			// sortConfig: {}
 		}
 	},
 	computed: {
 		...mapGetters([
-			"getRecipes"
+			"getInventory",
+			"getScreenActiveState"
 		]),
-		recipes() {
-			return this.getRecipes
+		inventory() {
+			return this.getInventory
 		},
+		hasScreen() {
+			return this.getScreenActiveState
+		}
 	},
 	methods: {
+		...mapActions([
+			'setScreenState'
+		]),
+		loDash(string) {
+			return loDash(string)
+		},
 		handleChange(e) {
 			if (this.searchQuery.length) {
-				let filteredResults = filterResults(this.searchQuery, this.recipes)
+				let filteredResults = filterResults(this.searchQuery, this.inventory)
 
-				if (this.results && this.sorted) {
+				/* if (this.results && this.sorted) {
 					let results = this.sortConfig.sortMethod.apply(null, [this.recipes, ...this.sortConfig.args])
 					filteredResults = filterResults(this.searchQuery, results)
-				}
+				} */
 
 				this.results = filteredResults.map(result => result)
+				if (this.results.length) {
+					this.setScreenState(true)
+				}
 			} else {
 				this.reset()
+				this.setScreenState(false)
 			}
 		},
-		handleSubmit(e) {
-			// console.log(this.recipes)
-		},
+		/* handleSubmit(e) {
+			let result = this.results[this.focusedResultIndex]
+			if (result) {
+				this.handleSelected()
+				if (result.hasOwnProperty("types")) {
+					this.$router.push(`/items/${loDash(result.name)}`)
+				} else if (result.hasOwnProperty("ingredients")) {
+					this.$router.push(`/recipes/${loDash(result.name)}`)
+				}
+			}
+		}, */
 		highlightTextMatches(word) {
 			return highlightTextMatches(this.searchQuery, word)
 		},
-		handleFocus(e) {
-			console.log('focused')
-		},
-		cycleUp(e) {
+		/* cycleUp(e) {
 			let nextItemIndex = this.focusedResultIndex - 1
 
 			if (nextItemIndex < 0) {
@@ -110,23 +135,27 @@ export default {
 		cycleDown(e) {
 			let nextItemIndex = this.focusedResultIndex + 1 % this.results.length
 			this.focusedResultIndex = nextItemIndex % this.results.length
-		},
-		sortResults(value) {
+		}, */
+		/* sortResults(value) {
             this.sorted = true
             this.results = filterResults(this.searchQuery, value.results).map(result => result)
 			this.sortConfig = {...value}
-        },
-		handleBlur() {
-			this.reset()
-			// this.$emit('inputBlur', {focused: false})
-		},
+        }, */
 		reset() {
 			this.searchQuery = ''
 			this.results = []
-			this.focusedResultIndex= 0
-			this.sorted= false
+			this.setScreenState(false)
+			// this.focusedResultIndex= 0
+			/* this.sorted= false
 			this.sortProperty = ''
-			this.sortConfig = {}
+			this.sortConfig = {} */
+		},
+		handleSelected() {
+			this.reset()
+			this.setScreenState(false)
+		},
+		closeOnEsc() {
+			this.reset()
 		}
 	}
 }
@@ -149,7 +178,8 @@ export default {
 }
 
 .bold {
-	font-weight: 600;
+	font-weight: 700;
+	color: purple;
 }
 
 .search--results__wrapper {
@@ -166,5 +196,17 @@ export default {
 
 .search--results {
 	padding: 0;
+}
+
+.screen {
+	background-color: lighten(moccasin, 10%);
+	opacity: 0.7;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
     <div>
         <RecipeList />
-        <router-link to="/items">Items</router-link>
     </div>
 </template>
 

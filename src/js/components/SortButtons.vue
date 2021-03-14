@@ -1,50 +1,71 @@
 <template>
-    <div class="sort--options">
+    <div class="sort__wrapper">
         <button
-            @click="sortByNameDesc()"
+            @click="sortByHealthAsc()"
+            class="button--sort button--health button--asc"
         >
-            name desc
-        </button>
-        <button
-            @click="sortByNameAsc()"
-        >
-            name asc
+            <img 
+                src="/images/health.png"
+                alt="Sort by health asc"
+            />
+            <div class="caret"></div>
         </button>
         <button
             @click="sortByHealthDesc()"
+            class="button--sort button--health button--desc"
         >
-            health desc
-        </button>
-        <button
-            @click="sortByHealthAsc()"
-        >
-            health asc
-        </button>
-        <button
-            @click="sortByHungerDesc()"
-        >
-            Hunger desc
+            <img 
+                src="/images/health.png"
+                alt="Sort by health desc"
+            />
+            <div class="caret"></div>
         </button>
         <button
             @click="sortByHungerAsc()"
+            class="button--sort button--hunger button--asc"
         >
-            Hunger asc
+            <img 
+                src="/images/hunger.png"
+                alt="Sort by Hunger asc"
+            />
+            <div class="caret"></div>
         </button>
         <button
-            @click="sortBySanityDesc()"
+            @click="sortByHungerDesc()"
+            class="button--sort button--hunger button--desc"
         >
-            Sanity desc
+            <img 
+                src="/images/hunger.png"
+                alt="Sort by Hunger desc"
+            />
+            <div class="caret"></div>
         </button>
         <button
             @click="sortBySanityAsc()"
+            class="button--sort button--sanity button--asc"
         >
-            Sanity asc
+            <img 
+                src="/images/sanity.png"
+                alt="Sort by Sanity asc"
+            />
+            <div class="caret"></div>
+        </button>
+        <button
+            @click="sortBySanityDesc()"
+            class="button--sort button--sanity button--desc"
+        >
+            <img 
+                src="/images/sanity.png"
+                alt="Sort by Sanity desc"
+            />
+            <div class="caret"></div>
         </button>
     </div>
 </template>
 
 <script>
 import { sortByPropsAsc, sortByPropsDesc } from '../helpers'
+import { health, hunger, sanity } from '../mixins/images'
 
 export default {
     name: 'SortItemButtons',
@@ -58,16 +79,6 @@ export default {
         }
     },
     methods: {
-        sortByNameAsc() {
-            this.updateActiveButton(event)
-			let sortedResults = sortByPropsAsc(this.dataset, 'name')
-            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsAsc, args: ['name'] })
-		},
-		sortByNameDesc() {
-            this.updateActiveButton(event)
-			let sortedResults = sortByPropsDesc(this.dataset, 'name')
-            this.$emit('sorted', { results: sortedResults, sortMethod: sortByPropsDesc, args: ['name'] })
-		},
 		sortByHealthAsc() {
             this.updateActiveButton(event)
 			let sortedResults = sortByPropsAsc(this.dataset, 'stats', 'health')
@@ -104,19 +115,77 @@ export default {
                 activeButton.classList.remove('active')
             }
 
-            event.target.classList.add('active')
+            event.target.parentElement.classList.add('active')
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.sort--options {
-    text-align: right;
-    margin: 5px;
+@use "../../scss/index";
+
+.sort__wrapper {
+    text-align: center;
+    margin-bottom: 15px;
+
+    @include index.breakpoint('l') {
+        text-align: right;
+        margin: 5px;
+    }
 }
 
 button.active {
-    background-color: green;
+    .caret, &:hover .caret {
+        border-right-color: darkmagenta;
+    }
+}
+
+.button--sort {
+    position: relative;
+    background: none;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+
+        .caret {
+            border-right-color: darken(plum, 25%);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button--desc {
+    .caret {
+        top: calc(100% - 8px);
+        transform: rotate(-90deg);
+    }
+}
+
+.button--asc {
+    .caret {
+        bottom: calc(100% - 6px);
+        transform: rotate(90deg);
+    }
+}
+.caret {
+    z-index: 1;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid plum;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    left: calc(50% - 5px);
+}
+
+.button--sort img {
+    height: 44px;
+    width: 44px;
 }
 </style>

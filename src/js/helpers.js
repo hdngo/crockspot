@@ -1,9 +1,13 @@
 const convertParamToName = (param) => {
     const exceptions = ['and', 'of']
-    return param.split('-')
-        .map(word => 
-            exceptions.includes(word.toLowerCase()) ? word : (word.charAt(0).toUpperCase() + word.slice(1))
-        ).join(' ')
+    if (param === "surf-n-turf") {
+        return "Surf'n'Turf"
+    } else {
+        return param.split('-')
+            .map(word => 
+                exceptions.includes(word.toLowerCase()) ? word : (word.charAt(0).toUpperCase() + word.slice(1))
+            ).join(' ')
+    }
 }
 
 const loDash = (string) => {

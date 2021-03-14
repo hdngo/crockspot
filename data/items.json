@@ -1,29 +1,5 @@
 [
     {
-        "name": "Meats",
-        "types": [
-            "Food Group"
-        ],
-        "description": "The true fruit of the earth!",
-        "imageName": "meat.png"
-    },
-    {
-        "name": "Fish",
-        "types": [
-            "Food Group"
-        ],
-        "description": "Meat of the sea!",
-        "imageName": "fish.png"
-    },
-    {
-        "name": "Eggs",
-        "types": [
-            "Food Group"
-        ],
-        "description": "Will it hatch?",
-        "imageName": "eggs.png"
-    },
-    {
         "name": "Fruits",
         "types": [
             "Food Group"
@@ -40,7 +16,7 @@
         "imageName": "vegetables.png"
     },
     {
-        "name": "Sweetener",
+        "name": "Sweeteners",
         "types": [
             "Food Group"
         ],
@@ -71,7 +47,7 @@
         "imageName": "filler.png"
     },
     {
-        "name": "Inedible",
+        "name": "Inedibles",
         "types": [
             "Food Group"
         ],
@@ -196,8 +172,12 @@
         "name": "Fish",
         "types": [
             "Fish",
-            "Meats"
+            "Meats",
+            "Food Group"
+
         ],
+        "description": "Meat of the sea!",
+        "imageName": "fish.png",
         "foodValue": {
             "Fish": 1,
             "Meats": 0.5
@@ -293,8 +273,11 @@
     {
         "name": "Meats",
         "types": [
-            "Meats"
+            "Meats",
+            "Food Group"
         ],
+        "description": "The true fruit of the earth!",
+        "imageName": "meats.png",
         "foodValue": {
             "Meats": 1
         },
@@ -423,7 +406,7 @@
             "Fish": 0.25
         },
         "obtainedFrom": [
-            "Sea Weed",
+            "Seaweed",
             "Crab King"
         ]
     },
@@ -444,8 +427,12 @@
     {
         "name": "Eggs",
         "types": [
-            "Eggs"
+            "Eggs",
+            "Food Group"
+
         ],
+        "description": "Will it hatch?",
+        "imageName": "eggs.png",
         "foodValue": {
             "Eggs": 1
         },
@@ -491,7 +478,7 @@
             "Eggs": 4
         },
         "obtainedFrom": [
-            "Tallbird Egg"
+            "Tallbird Eggs"
         ]
     },
     {
@@ -547,7 +534,8 @@
     {
         "name": "Durian",
         "types": [
-            "Fruits"
+            "Fruits",
+            "Monster Food"
         ],
         "foodValues": {
             "Fruits": 1,
@@ -561,6 +549,7 @@
         "name": "Extra Smelly Durian",
         "types": [
             "Fruits",
+            "Monster Food",
             "Cooked"
         ],
         "foodValues": {
@@ -977,7 +966,7 @@
         ]
     },
     {
-        "name": "Onion",
+        "name": "Onions",
         "types": [
             "Vegetables"
         ],
@@ -989,7 +978,7 @@
         ]
     },
     {
-        "name": "Roasted Onion",
+        "name": "Roasted Onions",
         "types": [
             "Vegetables",
             "Cooked"
@@ -998,7 +987,7 @@
             "Vegetables": 1
         },
         "obtainedFrom": [
-            "Onion"
+            "Onions"
         ]
     },
     {
@@ -1105,10 +1094,10 @@
     {
         "name": "Honey",
         "types": [
-            "Sweetener"
+            "Sweeteners"
         ],
         "foodValues": {
-            "Sweetener": 1
+            "Sweeteners": 1
         },
         "obtainedFrom": [
             "Bee",
@@ -1123,10 +1112,10 @@
     {
         "name": "Honeycomb",
         "types": [
-            "Sweetener"
+            "Sweeteners"
         ],
         "foodValues": {
-            "Sweetener": 1
+            "Sweeteners": 1
         },
         "obtainedFrom": [
             "Beehive",
@@ -1138,10 +1127,10 @@
     {
         "name": "Royal Jelly",
         "types": [
-            "Sweetener"
+            "Sweeteners"
         ],
         "foodValues": {
-            "Sweetener": 3
+            "Sweeteners": 3
         },
         "obtainedFrom": [
             "Bee Queen",
@@ -1186,7 +1175,7 @@
         "name": "Twigs",
         "types": [
             "Filler",
-            "Inedible"
+            "Inedibles"
         ],
         "obtainedFrom": [
             "Tumbleweed",
@@ -1194,6 +1183,16 @@
             "Sapling",
             "Spiky Tree",
             "Birchnutter"
+        ]
+    },
+    {
+        "name": "Banana",
+        "types": [
+            "Fruits"
+        ],
+        "obtainedFrom": [
+            "Splumonkey",
+            "Cave Banana Tree"
         ]
     }
 ]

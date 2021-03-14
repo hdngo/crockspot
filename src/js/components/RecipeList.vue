@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="recipes__wrapper">
         <!-- <MainSearchBar/> -->
         <SortItemButtons
             :dataset="recipes"
@@ -85,6 +85,14 @@ export default {
 <style lang="scss">
 @use "../../scss/index";
 
+.recipes__wrapper {
+    margin: 0 auto;
+
+    @include index.breakpoint('l') {
+        margin-left: 156px;
+    }
+}
+
 .recipes {
     display: flex;
     justify-content: center;
@@ -95,10 +103,10 @@ export default {
         flex: 1 1 100%;
         justify-content: center;
         align-items: center;
-        padding: 10px;
-        background-color: moccasin;
+        padding: 25px;
+        background-color: lighten(moccasin, 10%);
         border: 2px solid indigo;
-        margin: 5px;
+        margin: 10px;
         border-radius: 4px;
 
         @include index.breakpoint('m') {
@@ -109,8 +117,8 @@ export default {
             flex-basis: 30%;
         }
 
-        @include index.breakpoint('xl') {
-            flex-basis: 20%;
+        &:hover {
+            background: darken(moccasin, 15%);
         }
     }
 }
@@ -132,6 +140,14 @@ export default {
 .recipe__info--left {
     justify-content: center;
     align-items: center;
+
+    @include index.breakpoint('l') {
+        align-items: flex-start;
+    }
+
+    @include index.breakpoint('xl') {
+        align-items: center;
+    }
 }
 
 .recipe__info--right {
@@ -139,8 +155,18 @@ export default {
 }
 
 .recipe__image {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
+
+    @include index.breakpoint('l') {
+        height: 80px;
+        width: 80px;
+    }
+
+    @include index.breakpoint('xl') {
+        height: 110px;
+        width: 110px;
+    }
 }
 
 .recipe__name {

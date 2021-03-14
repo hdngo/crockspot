@@ -10,64 +10,18 @@
                 :class="{'menu__item--active': selectedCategory === category.name}"
                 @click="handleClick(category.name)"
             >
-                <router-link
-                    :to="`/items/${loDash(category.name)}`"
-                >
-                     <img
-                        :src="`/images/${category.imageName}`"
-                        :alt="category.name"
-                        class="menu__image"
-                    />
-                </router-link>
+                <img
+                    :src="`/images/${category.imageName}`"
+                    :alt="category.name"
+                    class="menu__image"
+                />
             </li>
         </ul>
-        <div
-            ref="carousel"
-            class="carousel carousel--hidden"
-        >
-            <ul 
-                class="carousel__items"
-                v-if="selectedCategoryItems.length"
-                v-on:scroll="handleScroll"
-            >
-                <li
-                    v-for="(item, i) in selectedCategoryItems"
-                    :key="`${loDash(selectedCategory)}-item-${i}`"
-                    class="carousel__item"
-                >
-                    <router-link
-                        :to="`/items/${loDash(item.name)}`"
-                    >
-                        {{ item.name }}
-                        <img
-                            class="carousel__image"
-                            :src="`/images/${loDash(item.name)}.png`"
-                            :alt="item.name"
-                        />
-                    </router-link>
-                </li>
-            </ul>
-            <button
-                class="carousel__control carousel__control--prev"
-                ref="prevButton"
-                @click="handlePrevClick"
-                disabled
-            >
-                Previous
-            </button>
-            <button
-                class="carousel__control carousel__control--next"
-                ref="nextButton"
-                @click="handleNextClick"
-                disabled
-            >
-                Next
-            </button>
-            <div 
-                class="carousel__control carousel__close"
-                @click="closeCarousel"
-            />
-        </div>
+        <Carousel
+            v-if="selectedCategory"
+            :selectedCategory="selectedCategory"
+            @close="handleClose"
+        />
     </aside>
 </template>
 
@@ -75,13 +29,16 @@
 import { loDash } from '../helpers'
 import { mapGetters } from 'vuex'
 import * as Images from '../mixins/images'
+import Carousel from './Carousel.vue'
 
 export default {
     name: 'Sidebar',
+    components: { 
+        Carousel 
+    },
     data() {
         return {
             selectedCategory: null,
-            carousel: null,
         }
     },
     computed: {
@@ -94,42 +51,6 @@ export default {
         },
         categories() {
             return this.getItemCategories
-        },
-        selectedCategoryItems() {
-            let items = []
-            if (this.selectedCategory) {
-                items = [...this.getCategoryItems(this.selectedCategory)]
-            }
-            return items
-        }
-    },
-    mounted() {
-        if (this.$refs.carousel) {
-            this.carousel = this.$refs.carousel
-        }
-    },
-    updated() {
-        if (this.$refs.prevButton) {
-            this.carousel.prevButton = this.$refs.prevButton
-        }
-
-        if (this.$refs.nextButton) {
-            this.carousel.nextButton = this.$refs.nextButton
-        }
-
-        if (this.$refs.prevButton || this.$refs.nextButton) {
-            this.carousel.firstItem = this.carousel.querySelector('.carousel__item:first-of-type')
-            this.carousel.lastItem = this.carousel.querySelector('.carousel__item:last-of-type')
-            this.carousel.scrollArea = this.carousel.querySelector('.carousel__items')
-            this.carousel.items = this.carousel.querySelectorAll('.carousel__item')
-        }
-        
-        if (this.carousel.prevButton) {
-            this.createObserver(this.$refs.carousel, this.carousel.firstItem)
-        }
-
-        if (this.carousel.nextButton) {
-            this.createObserver(this.$refs.carousel, this.carousel.lastItem)
         }
     },
     methods: {
@@ -137,164 +58,50 @@ export default {
             return loDash(string)
         },
         handleClick(categoryName) {
-            if (this.carousel) {
-                this.carousel.classList.remove('carousel--hidden')
-            }
             this.selectedCategory = categoryName
         },
-        getCategoryItems(categoryName) {
-            return this.items.
-                slice(this.categories.length).
-                filter(item => 
-                    item.types.includes(categoryName)
-                )
-        },
-        createObserver(rootEl, el) {
-            let observer;
-
-            let options = {
-                root: rootEl,
-                rootMargin: "0px",
-                threshold: [1]
-            }
-
-            observer = new IntersectionObserver(this.handleIntersect, options)
-            observer.observe(el)
-        },
-        handleIntersect(entries, observer) {
-            let prevButton = this.carousel.prevButton
-            const nextButton = this.carousel.nextButton
-            let firstItem = this.carousel.firstItem
-            let lastItem = this.carousel.lastItem
-            entries.forEach((entry) => {
-                if (entry.intersectionRatio === 1) {
-                    if (entry.target === firstItem) {
-                        prevButton.disabled = true
-                    } else if (entry.target === lastItem) {
-                        nextButton.disabled = true
-                    }
-                } else {
-                    if (entry.target === firstItem) {
-                        prevButton.disabled = false
-                    } else if (entry.target === lastItem) {
-                        nextButton.disabled = false
-                    }
-                }
-            })
-        },
-        handleScroll() {
-            console.log('scrolly')
-        },
-        handlePrevClick() {
-            this.scrollToPrev()
-        },
-        handleNextClick() {
-            this.scrollToNext()
-        },
-        scrollToPrev() {
-            const itemMargin = 10
-            let items = this.carousel.items
-            let scrollArea = this.carousel.scrollArea
-            let clippedItem
-            let prevItem
-
-            let carouselTop = scrollArea.scrollTop
-
-            for (let i = 0; i < items.length; i++) {
-                let itemTop = items[i].offsetTop
-                if (itemTop < carouselTop) {
-                    clippedItem = items[i]
-                } else {
-                    clippedItem = items[i - 1]
-                    break
-                }
-            }
-            if (clippedItem) {
-                scrollArea.scrollTop = clippedItem.offsetTop - itemMargin
-            }
-        },
-        scrollToNext() {
-            const itemMargin = 10
-            let items = this.carousel.items
-            let scrollArea = this.carousel.scrollArea
-            let clippedItem
-            let nextItem
-            let carouselBottom = scrollArea.scrollTop ? scrollArea.offsetTop + scrollArea.offsetHeight + scrollArea.scrollTop : scrollArea.offsetTop + scrollArea.offsetHeight
-
-            for (let i = 0; i < items.length; i++) {
-                if (clippedItem) {
-                    break
-                }
-                let itemBottom = items[i].offsetTop + items[i].offsetHeight
-                if (itemBottom > carouselBottom) {
-                    clippedItem = items[i]
-                    if (i + 1 < items.length) {
-                        nextItem = items[i + 1]
-                    } else {
-                        nextItem = null
-                    }
-                }
-            }
-
-            if (clippedItem && !nextItem) {
-                scrollArea.scrollTop = scrollArea.scrollTop + clippedItem.offsetHeight + (itemMargin * 2)
-            }
-
-            if (nextItem) {
-                scrollArea.scrollTop = scrollArea.scrollTop + (nextItem.offsetTop - carouselBottom) - 1
-            }
-        },
-        closeCarousel() {
-            this.carousel.classList.add('carousel--hidden')
+        handleClose() {
             this.selectedCategory = null
-            this.selectedCategoryItems = []
         }
     },
 }
 </script>
 
 <style lang="scss" scoped>
+@use "../../scss/index";
+
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 auto;
-    padding: 5px 5px;
-    background-color: white;
-    border: 4px solid black;
-    position: fixed;
-    left: 0;
+    display: none;
+
+    @include index.breakpoint('l') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 auto;
+        padding: 5px 5px;
+        background-color: white;
+        border: 4px solid black;
+        position: fixed;
+        left: 25px;
+    }
 }
 
 .menu {
-    // padding: 5px;
     background-color: purple;
     border: 2px solid black;
     margin: 0;
 }
 
 .menu__item {
-    background-color: darken(moccasin, 5%);
+    background-color: lighten(moccasin, 10%);
     border: 2px solid black;
     padding: 5px;
     margin: 5px;
     color: indigo;
 
     &:hover {
-        background-color: lighten(moccasin, 5%);
-    }
-
-    a {
-        color: indigo;
-
-        &:visited {
-            color: lighten(indigo, 10%);
-        }
-
-        &:hover, &:focus {
-            color: lighten(indigo, 10%);
-            text-shadow: 2px 1px 3px plum;
-        }
+        background-color: darken(moccasin, 15%);
+        cursor: pointer;
     }
 }
 
@@ -307,73 +114,5 @@ export default {
 .carousel__image {
     height: 44px;
     width: 44px;
-}
-
-.carousel {
-    background-color: purple;
-    position: absolute;
-    left: calc(100% + 20px);
-    height: 100%;
-
-    &.carousel--hidden {
-        display: none;
-    }
-}
-
-.carousel__items {
-    height: 100%;
-    margin: 0;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    padding: 5px;
-    border: 4px solid black;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-.carousel__item {
-    display: flex;
-    margin: 10px;
-    background-color: white;
-    border: 2px solid black;
-
-    a {
-        padding: 5px;
-    }
-}
-
-.carousel__control {
-    position: absolute;
-}
-
-.carousel__control--prev {
-    bottom: calc(100% + 5px);
-    left: calc(50% - 38px);
-}
-
-.carousel__control--next {
-    top: calc(100% + 5px);
-    left: calc(50% - 25px);
-}
-
-.carousel__close {
-    width: 0px;
-    height: 0px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid black;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    top: calc(50% - 10px);
-    right: 100%;
-
-    &:hover {
-        border-right: 20px solid darken(violet, 70%);
-        cursor: pointer;
-    }
 }
 </style>

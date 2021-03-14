@@ -3,18 +3,32 @@
 		<NavBar />
 		<Sidebar />
 		<router-view></router-view>
+		<div 
+			v-if="hasScreen"
+			class="screen"
+		>
+		</div>
 	</div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
 import Sidebar from './components/SideBar.vue'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
 		Sidebar
+	},
+	computed: {
+		...mapGetters([
+			"getScreenActiveState"
+		]),
+		hasScreen() {
+			return this.getScreenActiveState
+		}
 	}
 
 };
@@ -26,22 +40,32 @@ export default {
 
 html,
 body {
-	width: 100%
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	
 }
 
 #app {
-	height: 100%;
+	flex: 1 1 auto;
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding-top: 125px;
-	padding-bottom: 125px;
+	padding-top: 175px;
+	padding-bottom: 60px;
 	padding-left: 80px;
 	padding-right: 80px;
 	position: relative;
-	background: #41295a;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-image: -webkit-linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+	@include index.breakpoint('l') {
+		padding-top: 125px;
+	}
 }
 
 a {

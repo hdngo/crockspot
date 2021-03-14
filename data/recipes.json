@@ -10,7 +10,7 @@
         "cookTime": 40,
         "ingredients": [
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 1
             },
             {
@@ -33,7 +33,7 @@
         "cookTime": 10,
         "ingredients": [
             {
-                "name": "Cave Banana",
+                "name": "Banana",
                 "quantity": 1
             },
             {
@@ -41,12 +41,12 @@
                 "quantity": 1
             },
             {
-                "name": "Twig",
+                "name": "Twigs",
                 "quantity": 1
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Fish"
         ]
     },
@@ -86,7 +86,7 @@
                 "quantity": 1
             },
             {
-                "name": "Kelp Frond",
+                "name": "Kelp Fronds",
                 "quantity": 1
             },
             {
@@ -168,7 +168,7 @@
             }
         ],
         "restrictions": [
-            "Meat"
+            "Meats"
         ]
     },
     {
@@ -182,7 +182,7 @@
         "cookTime": 10,
         "ingredients": [
             {
-                "name": "Kelp Fond",
+                "name": "Kelp Fronds",
                 "quantity": 2
             },
             {
@@ -236,7 +236,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Inedibles"
         ]
     },
@@ -256,7 +256,7 @@
             }
         ],
         "restrictions": [
-            "Meat"
+            "Meats"
         ]
     },
     {
@@ -279,7 +279,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             {
                 "name": "Inedibles",
                 "limit": 2
@@ -353,7 +353,7 @@
         "restrictions": [
             {
                 "name": "Fruits",
-                "quantity": 3
+                "limit": 3
             }
         ]
     },
@@ -394,7 +394,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Vegetables"
         ]
     },
@@ -413,7 +413,7 @@
                 "quantity": 1
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 1.5
             }
         ],
@@ -440,14 +440,14 @@
                 "quantity": 1
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 1.5
             }
         ],
         "restrictions": [
             "Inedibles",
             {
-                "name": "Meat",
+                "name": "Meats",
                 "limit": 1.5
             }
         ]
@@ -467,7 +467,7 @@
                 "quantity": 2
             },
             {
-                "name": "Sweetener",
+                "name": "Sweeteners",
                 "quantity": 2
             }
         ],
@@ -484,7 +484,7 @@
         "cookTime": 40,
         "ingredients": [
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             },
             {
@@ -531,7 +531,7 @@
         "cookTime": 15,
         "ingredients": [
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             }
         ],
@@ -550,7 +550,7 @@
         "cookTime": 15,
         "ingredients": [
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 3
             }
         ],
@@ -641,7 +641,7 @@
                 "quantity": 1
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             },
             {
@@ -668,7 +668,7 @@
                 "quantity": 1
             },
             {
-                "name": "Sweetener",
+                "name": "Sweeteners",
                 "quantity": 2
             }
         ],
@@ -690,7 +690,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Inedibles"
         ]
     },
@@ -714,7 +714,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Inedibles",
             "Eggs"
         ]
@@ -736,7 +736,7 @@
         ],
         "restrictions": [
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 2.5
             }
         ]
@@ -798,14 +798,14 @@
                 "quantity": 1
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             }
         ],
         "restrictions": [
             "Inedibles",
             {
-                "name": "Meat",
+                "name": "Meats",
                 "limit": 1.5
             }
         ]
@@ -844,12 +844,12 @@
         "cookTime": 10,
         "ingredients": [
             {
-                "name": "Sweetener",
+                "name": "Sweeteners",
                 "quantity": 3
             }
         ],
         "restrictions": [
-            "Meat"
+            "Meats"
         ]
     },
     {
@@ -876,7 +876,7 @@
             }
         ],
         "restrictions": [
-            "Meat",
+            "Meats",
             "Eggs",
             "Vegetables",
             "Dairy"
@@ -897,7 +897,7 @@
                 "quantity": 2
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             },
             {
@@ -911,7 +911,7 @@
                 "quantity": 2
             },
             {
-                "name": "Meat",
+                "name": "Meats",
                 "quantity": 0.5
             },
             {
