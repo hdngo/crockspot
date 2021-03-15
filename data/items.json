@@ -5,7 +5,11 @@
             "Food Group"
         ],
         "description": "IT HAS HEALING PROPERTIES",
-        "imageName": "fruits.png"
+        "imageName": "fruits.png",
+        "obtainedFrom": [
+            "Loot",
+            "Farm"
+        ]
     },
     {
         "name": "Vegetables",
@@ -13,7 +17,11 @@
             "Food Group"
         ],
         "description": "What seeds shall I sow?",
-        "imageName": "vegetables.png"
+        "imageName": "vegetables.png",
+        "obtainedFrom": [
+            "Loot",
+            "Farm"
+        ]
     },
     {
         "name": "Sweeteners",

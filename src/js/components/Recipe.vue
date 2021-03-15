@@ -56,11 +56,16 @@
                 <li
                     v-for="(ingredient, i) in recipe.ingredients"
                     :key="`${hyphenedRecipeName}-ingredient-${i}`"
-                    class="ingredient"
+                    class="ingredient tooltip--parent"
+                    @mouseenter="showTooltip"
+                    @mouseleave="hideTooltip"
                 >
                     <router-link
                         :to="`/items/${loDash(ingredient.name)}`"
                     >
+                        <Tooltip
+                            :text="ingredient.name"
+                        />
                         <div class="ingredient__item">
                             <div class="ingredient__image__wrapper">
                                 <img 
@@ -84,14 +89,19 @@
                 <li
                     v-for="(restriction, i) in recipe.restrictions"
                     :key="`${hyphenedRecipeName}-restriction-${i}`"
-                    class="restriction"
+                    class="restriction tooltip--parent"
+                    @mouseenter="showTooltip"
+                    @mouseleave="hideTooltip"
                 >
                     <template
                         v-if="(typeof restriction === 'object')"
                     >
                         <router-link
-                            :to="`${loDash(restriction.name)}`"
+                            :to="`/items/${loDash(restriction.name)}`"
                         >
+                            <Tooltip
+                                :text="restriction.name"
+                            />
                             <div class="restriction__item">
                                 <div class="restriction__image__wrapper">
                                     <img 
@@ -116,6 +126,9 @@
                         <router-link
                             :to="`/items/${loDash(restriction)}`"
                         >
+                            <Tooltip
+                                :text="restriction"
+                            />
                             <div class="ingredient__item">
                                 <div class="ingredient__image__wrapper">
                                     <img 
@@ -137,10 +150,14 @@
 <script>
 import { mapGetters } from 'vuex'
 import { convertParamToName, loDash } from '../helpers'
+import Tooltip from './Tooltip.vue'
 import * as Images from '../mixins/images'
 
 export default {
     name: 'Recipe',
+    components: {
+        Tooltip
+    },
     computed: {
         ...mapGetters([
             'getRecipes'
@@ -160,6 +177,14 @@ export default {
     methods: {
         loDash(string) {
             return loDash(string)
+        },
+        showTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.add('visible')
+        },
+        hideTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.remove('visible')
         }
     }
 }

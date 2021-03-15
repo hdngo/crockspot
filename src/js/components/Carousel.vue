@@ -10,12 +10,17 @@
             <li
                 v-for="(item, i) in selectedCategoryItems"
                 :key="`${loDash(selectedCategory)}-item-${i}`"
-                class="carousel__item"
+                class="carousel__item tooltip--parent"
                 @click="handleClick"
+                @mouseenter="showTooltip"
+                @mouseleave="hideTooltip"
             >
                 <router-link
                     :to="`/items/${loDash(item.name)}`"
                 >
+                    <Tooltip
+                        :text="item.name"
+                    />
                     <img
                         class="carousel__image"
                         :src="`/images/${loDash(item.name)}.png`"
@@ -49,10 +54,14 @@
 
 <script>
 import { loDash } from '../helpers'
+import Tooltip from './Tooltip.vue'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'Carousel',
+    components: {
+        Tooltip
+    },
     props: {
         selectedCategory: {
             type: String,
@@ -225,33 +234,41 @@ export default {
         },
         setupCarousel() {
             if (this.$refs.carousel) {
-            this.carousel = this.$refs.carousel
-            this.setCarouselOpenState(true)
-            window.addEventListener('keyup', this.closeOnEsc)
-        }
+                this.carousel = this.$refs.carousel
+                this.setCarouselOpenState(true)
+                window.addEventListener('keyup', this.closeOnEsc)
+            }
 
-        if (this.$refs.carousel && this.$refs.prevButton) {
-            this.carousel.prevButton = this.$refs.prevButton
-        }
+            if (this.$refs.carousel && this.$refs.prevButton) {
+                this.carousel.prevButton = this.$refs.prevButton
+            }
 
-        if (this.$refs.carousel &&this.$refs.nextButton) {
-            this.carousel.nextButton = this.$refs.nextButton
-        }
+            if (this.$refs.carousel &&this.$refs.nextButton) {
+                this.carousel.nextButton = this.$refs.nextButton
+            }
 
-        if (this.$refs.prevButton || this.$refs.nextButton) {
-            this.carousel.firstItem = this.carousel.querySelector('.carousel__item:first-of-type')
-            this.carousel.lastItem = this.carousel.querySelector('.carousel__item:last-of-type')
-            this.carousel.scrollArea = this.carousel.querySelector('.carousel__items')
-            this.carousel.items = this.carousel.querySelectorAll('.carousel__item')
-        }
-        
-        if (this.carousel.prevButton && this.$refs.carousel) {
-            this.createObserver(this.$refs.carousel, this.carousel.firstItem)
-        }
+            if (this.$refs.prevButton || this.$refs.nextButton) {
+                this.carousel.firstItem = this.carousel.querySelector('.carousel__item:first-of-type')
+                this.carousel.lastItem = this.carousel.querySelector('.carousel__item:last-of-type')
+                this.carousel.scrollArea = this.carousel.querySelector('.carousel__items')
+                this.carousel.items = this.carousel.querySelectorAll('.carousel__item')
+            }
+            
+            if (this.carousel.prevButton && this.$refs.carousel) {
+                this.createObserver(this.$refs.carousel, this.carousel.firstItem)
+            }
 
-        if (this.carousel.nextButton && this.$refs.carousel) {
-            this.createObserver(this.$refs.carousel, this.carousel.lastItem)
-        }
+            if (this.carousel.nextButton && this.$refs.carousel) {
+                this.createObserver(this.$refs.carousel, this.carousel.lastItem)
+            }
+        },
+        showTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.add('visible')
+        },
+        hideTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.remove('visible')
         }
     }
 }
@@ -274,7 +291,8 @@ export default {
 .carousel__items {
     height: 100%;
     margin: 0;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: visible;
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -363,5 +381,17 @@ export default {
         border-right: 20px solid darken(violet, 70%);
         cursor: pointer;
     }
+}
+
+/* unfortunate absolute overflow clipping issue :( */
+.tooltip--parent::v-deep .tooltip {
+    font-size: 0.7em;
+    word-break: break-all;
+    bottom: auto;
+    top: 85%;
+    width: 100%;
+    left: 0;
+    color: darkmagenta;
+    font-weight: 700;
 }
 </style>

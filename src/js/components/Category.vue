@@ -22,11 +22,16 @@
                 <li
                     v-for="(item, i) in categoryItems"
                     :key="`${hyphenedCategoryName}-item-${i}`"
-                    class="item"
+                    class="item tooltip--parent"
+                    @mouseenter="showTooltip"
+                    @mouseleave="hideTooltip"
                 >
                     <router-link
                         :to="`/items/${loDash(item.name)}`"
                     >
+                        <Tooltip
+                            :text="item.name"
+                        />
                         <div class="category__item">
                             <div class="category__item__image__wrapper">
                                 <img 
@@ -46,10 +51,14 @@
 
 <script>
 import { loDash, convertParamToName } from '../helpers'
+import Tooltip from './Tooltip.vue'
 import { mapGetters } from 'vuex'
 
 export default {
     name: "Categories",
+    components: {
+        Tooltip
+    },
     computed: {
         ...mapGetters([
             'getItems'
@@ -69,7 +78,7 @@ export default {
             let items = []
             items = [...this.getCategoryItems()]
             return items
-        },
+        }
     },
     methods: {
         loDash(string) {
@@ -83,6 +92,14 @@ export default {
         },
         convertParamToName(param) {
             return convertParamToName(param)
+        },
+        showTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.add('visible')
+        },
+        hideTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.remove('visible')
         }
     }
 }

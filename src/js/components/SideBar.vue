@@ -6,10 +6,15 @@
             <li
                 v-for="(category, i) in categories"
                 :key="`category-${category}-${i}`"
-                class="menu__item"
+                class="menu__item tooltip--parent"
                 :class="{'menu__item--active': selectedCategory === category.name}"
                 @click="handleClick(category.name)"
+                @mouseenter="showTooltip"
+                @mouseleave="hideTooltip"
             >
+                <Tooltip
+                    :text="category.imageName"
+                />
                 <img
                     :src="`/images/${category.imageName}`"
                     :alt="category.name"
@@ -30,11 +35,13 @@ import { loDash } from '../helpers'
 import { mapGetters } from 'vuex'
 import * as Images from '../mixins/images'
 import Carousel from './Carousel.vue'
+import Tooltip from './Tooltip.vue'
 
 export default {
     name: 'Sidebar',
     components: { 
-        Carousel 
+        Carousel,
+        Tooltip
     },
     data() {
         return {
@@ -62,6 +69,14 @@ export default {
         },
         handleClose() {
             this.selectedCategory = null
+        },
+        showTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.add('visible')
+        },
+        hideTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.remove('visible')
         }
     },
 }
@@ -118,5 +133,9 @@ export default {
 .carousel__image {
     height: 44px;
     width: 44px;
+}
+
+.tooltip--parent::v-deep .tooltip {
+    left: 0;
 }
 </style>

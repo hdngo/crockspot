@@ -10,25 +10,34 @@
         <em>{{ item.description }}</em>
     </p>
     <div class="item__content">
-        <figure class="item__figure">
+        <figure 
+            class="item__figure"
+        >
             <img 
                 :src="`/images/${loDash(item.name)}.png`"
                 class="item__image"
             />
         </figure>
         
-        <section class="section section--types">
+        <section class="section section--types"
+            v-if="item.types.filter(type => type !== 'Food Group').length"
+        >
             <h2 class="section__title">Food Values</h2>
             
             <ul class="types">
                 <li
                     v-for="(type, i) in item.types.filter(type => type !== 'Food Group')"
                     :key="`${hypheneditemName}-type-${i}`"
-                    class="type"
+                    class="type tooltip--parent"
+                    @mouseenter="showTooltip"
+                    @mouseleave="hideTooltip"
                 >
                     <router-link
                         :to="`/categories/${loDash(type)}`"
                     >
+                        <Tooltip
+                            :text="type"
+                        />
                         <div class="type__item">
                             <div class="type__image__wrapper">
                                 <img 
@@ -57,11 +66,16 @@
                 <li
                     v-for="(source, i) in item.obtainedFrom"
                     :key="`${hypheneditemName}-source-${i}`"
-                    class="source"
+                    class="source tooltip--parent"
+                    @mouseenter="showTooltip"
+                    @mouseleave="hideTooltip"
                 >
                     <!-- <router-link
                         :to="`/items/${loDash(source)}`"
                     > -->
+                        <Tooltip
+                            :text="source"
+                        />
                         <div class="source__item">
                             <div class="source__image__wrapper">
                                 <img 
@@ -83,9 +97,13 @@
 import { mapGetters } from 'vuex'
 import { convertParamToName, loDash } from '../helpers'
 import * as Images from '../mixins/images'
+import Tooltip from './Tooltip.vue'
 
 export default {
     name: 'item',
+    components: {
+        Tooltip
+    },
     computed: {
         ...mapGetters([
             'getItems'
@@ -105,6 +123,14 @@ export default {
     methods: {
         loDash(string) {
             return loDash(string)
+        },
+        showTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.add('visible')
+        },
+        hideTooltip() {
+            const tooltip = event.target.querySelector('.tooltip')
+            tooltip.classList.remove('visible')
         }
     }
 }
