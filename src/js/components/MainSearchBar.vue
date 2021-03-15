@@ -1,6 +1,7 @@
 <template>
 	<div class="search search--main">
 		<form 
+			:class="{'active': searchQuery.length }"
 			class="form form--main"
 			@submit.prevent
 		>
@@ -12,6 +13,10 @@
 				v-model="searchQuery"
 				@input="handleChange"
 			>
+			<button 
+				class="cancel"
+				@click="reset"
+			>X</button>
 		</form>
 		<div 
 			class="search--results__wrapper"
@@ -171,6 +176,20 @@ export default {
 	position: relative;
 }
 
+.form--main {
+	position: relative;
+
+	&.active {
+		.cancel {
+			opacity: 1;
+			pointer-events: all;
+			color: darken(violet, 10%);
+			cursor: pointer;
+			font-weight: 700;
+		}
+	}
+}
+
 .form__search {
 	font-size: 1.4em;
 	min-width: 17.8em;
@@ -179,6 +198,26 @@ export default {
 	/* @include breakpoint('s') {
 		min-width: 20em;
 	} */
+}
+
+.cancel {
+	font-size: 1.6em;
+	background: transparent;
+	border: none;
+	transition: all 0.3s ease-out;
+	position: absolute;
+	right: 10px;
+	top: calc(1.6em / 6);
+	opacity: 0;
+	transition: all 0.4s ease-in;
+	pointer-events: none;
+	outline: none;
+
+	&:hover {
+		color: darken(violet, 10%);
+		cursor: pointer;
+		pointer-events: all;
+	}
 }
 
 .bold {

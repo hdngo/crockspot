@@ -26,9 +26,9 @@
                     :key="`${hypheneditemName}-type-${i}`"
                     class="type"
                 >
-                    <!-- <router-link
-                        :to="`/items/${loDash(type)}`"
-                    > -->
+                    <router-link
+                        :to="`/categories/${loDash(type)}`"
+                    >
                         <div class="type__item">
                             <div class="type__image__wrapper">
                                 <img 
@@ -44,7 +44,7 @@
                                 <span class="x">X</span>{{ `${item.foodValues[type]}` }}
                             </p>
                         </div>
-                    <!-- </router-link> -->
+                    </router-link>
                 </li>
             </ul>
         </section>

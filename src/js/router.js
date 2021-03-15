@@ -43,9 +43,15 @@ export default new Router({
                 import(/* webpackChunkName: "item" */ "./components/Item.vue")
         },
         {
+            path: "/categories/:name",
+            name: "category",
+            component: () =>
+                import(/* webpackChunkName: "category" */ "./components/Category.vue")
+        },
+        {
             path: "*",
             component: FourOhFour
-        }
+        },
     ],
     mode: 'history'
 })
