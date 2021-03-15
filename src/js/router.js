@@ -49,7 +49,7 @@ export default new Router({
                 import(/* webpackChunkName: "category" */ "./components/Category.vue")
         },
         {
-            path: "*",
+            path: "/*",
             component: FourOhFour
         },
     ],
