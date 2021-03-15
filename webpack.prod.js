@@ -7,11 +7,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
-    output: {
-		filename: '[name].js',
-		path: path.resolve(__dirname, 'dist'),
-		assetModuleFilename: 'images/[name][ext]'
-	},
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].css',

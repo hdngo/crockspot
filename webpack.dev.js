@@ -9,9 +9,4 @@ module.exports = merge(common, {
 		hot: true,
 		historyApiFallback: true
 	},
-    output: {
-		filename: '[name].[contenthash].js',
-		path: path.resolve(__dirname, 'dist'),
-		assetModuleFilename: 'images/[name][ext]'
-	},
 });
