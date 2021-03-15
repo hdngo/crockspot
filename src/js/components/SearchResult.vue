@@ -3,7 +3,47 @@
         class="results__item"
         @click="handleClick"
     >
-        <router-link 
+        <router-link
+            v-if="(itemData.types && itemData.types.includes('Food Group'))"
+            :to="`/categories/${loDash(itemData.name)}`"
+        >
+            <div class="results__info">
+                <div class="results__details">
+                    <h4
+                        v-html="name"
+                        class="results__name"
+                    />
+                    <img 
+                        :src="`/images/${loDash(itemData.name)}.png`" 
+                        class="results__image"
+                    />
+                    <span 
+                        v-if="itemData.description"
+                        class="results__description"
+                    >
+                        {{itemData.description}}
+                    </span>
+                </div>
+                <ul 
+                    v-if="itemData.stats"
+                    class="results__stats"
+                >
+                    <li
+                        v-for="statKey in Object.keys(itemData.stats)"
+                        class="results__stat"
+                        :key="`${loDash(statKey)}-${statKey}`"
+                    >
+                        <img 
+                            :src="`/images/${statKey}.png`"
+                            class="results__stat__img"
+                        />
+                        <span class="results__stat__value">{{`${itemData.stats[statKey]}`}}</span>
+                    </li>
+                </ul>
+            </div>
+        </router-link>
+        <router-link
+            v-else
             :to="`/${ itemData.ingredients ? 'recipes' : 'items'}/${loDash(itemData.name)}`"
         >
             <div class="results__info">
