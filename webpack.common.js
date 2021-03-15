@@ -4,21 +4,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-	mode: 'development',
 	entry: './src/index.js',
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'Development'
+			title: 'Crockspot'
 		}),
 		new VueLoaderPlugin()
 	],
-	devtool: 'inline-source-map',
-	devServer: {
-		contentBase: './dist',
-		hot: true,
-		historyApiFallback: true
-	},
 	resolve: {
         alias: {
             vue: 'vue/dist/vue.js'

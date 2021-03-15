@@ -40,14 +40,8 @@ export default {
 
 @font-face {
     font-family: 'Kranky';
-    // src: url('../../assets/fonts/Kranky-Regular.eot');
-    // src: url('../../assets/fonts/Kranky-Regular.eot?#iefix') format('embedded-opentype'),
-        // url('../../assets/fonts/Kranky-Regular.woff2') format('woff2'),
-        // url('../../assets/fonts/Kranky-Regular.woff') format('woff');
-    // src: url('../../assets/fonts/Kranky-Regular.woff2') format('woff2'),
-    // url('../../assets/fonts/Kranky-Regular.woff') format('woff');
-    src: url('../fonts/Kranky-Regular.woff2') format('woff2'),
-    url('../fonts/Kranky-Regular.woff') format('woff');
+    src: url('../../assets/fonts/Kranky-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/Kranky-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
