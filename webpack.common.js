@@ -8,7 +8,10 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'Crockspot'
+			title: 'Crockspot',
+            meta: {
+                viewport: "width=device-width, initial-scale=1, viewport-fit=cover"
+            }
 		}),
 		new VueLoaderPlugin()
 	],
