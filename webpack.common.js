@@ -20,11 +20,6 @@ module.exports = {
             vue: 'vue/dist/vue.js'
         },
     },
-	output: {
-		filename: '[name].[contenthash].js',
-		path: path.resolve(__dirname, 'dist'),
-		assetModuleFilename: 'images/[name][ext]'
-	},
   	module: {
 		rules: [
 			{
