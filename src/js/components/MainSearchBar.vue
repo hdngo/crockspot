@@ -171,6 +171,9 @@ export default {
 </script>
 
 <style lang="scss">
+@use "../../scss/index";
+
+
 .search--main {
 	text-align: center;
 	position: relative;
@@ -192,12 +195,12 @@ export default {
 
 .form__search {
 	font-size: 1.4em;
-	min-width: 17.8em;
 	padding: 0.8em;
+	min-width: 0;
 
-	/* @include breakpoint('s') {
-		min-width: 20em;
-	} */
+	@include index.breakpoint('l') {
+		min-width: 17.8em;
+	}
 }
 
 .cancel {

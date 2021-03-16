@@ -71,8 +71,8 @@ export default {
     .form__search {
         font-size: 1.2em;
         width: 100%;
-        padding: 0.5em 3em;
         border-radius: 10px;
+        padding: 0.5em 1.25em;
         border: 1px solid indigo;
         box-shadow: 0 0 3pt 2pt transparent;
         transition: all 0.4s ease-in-out;
@@ -88,6 +88,7 @@ export default {
 
         @include index.breakpoint('l'){
             min-width: 20em;
+            padding: 0.5em 3em;
             width: auto;
         }
 
